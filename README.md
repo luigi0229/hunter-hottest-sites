@@ -22,6 +22,6 @@ Lila is pursing a bachelor's degree in computer science and has a focus in pre m
 
 ## Task List
 
-[ ] Get acquainted with networking by reading [High Performance Browser Networking](https://hpbn.co/brief-history-of-http/)  
+[ ] Get acquainted with networking by reading [High Performance Browser Networking](https://hpbn.co)  
 [ ] Think about what data we want to capture (time, destination, ???)  
 [ ] Think about how we want to visualize the data (histogram, ???)  
