@@ -6,7 +6,7 @@ A visualization of Hunter students' packets, sniffed with wireshark.
 
 **Eli**
 
-My name is Eliazar, and I'm currently a fulltime student and network admin at a small IT provider. Although my strengths lie mostly in networking and batch scripting, I really enjoy programming and building big programs/projects from scratch. The thought of different tools and platforms communicating with each other to yield the same outcome is one of the things about computer science that fascinates me the most. I plan to use my networking skills along with my creativity to find ways to study this small population of students and have a better idea of what their interests are.
+Eliazar is currently a fulltime student and network admin at a small IT provider. Although his strengths lie mostly in networking and batch scripting, he really enjoy programming and building big programs/projects from scratch. The thought of different tools and platforms communicating with each other to yield the same outcome is one of the things about computer science that fascinates him the most. He plans on using his networking skills along with his creativity to find ways to study this small population of students and have a better idea of what their interests are.
 
 **Jia Yong**
 
