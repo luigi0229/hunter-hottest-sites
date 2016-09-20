@@ -24,13 +24,11 @@ Lila is pursing a bachelor's degree in computer science and has a focus in pre m
 
 ### Week 1
 [✔︎] Get acquainted with networking by reading [High Performance Browser Networking](https://hpbn.co)  
-[✔︎] Think about what data we want to capture.
-  - We are going to capture time and destination of each packet.
-[✔︎] Think about how we want to visualize the data
-  - Bar graph, 
-[✔︎] Test packet sniffing in multiple areas of Hunter.
+[✔︎] Think about what data we want to capture. (We are going to capture time and destination of each packet.)  
+[✔︎] Think about how we want to visualize the data.  
+[✔︎] Test packet sniffing in multiple areas of Hunter.  
 
 ### Week 2
-[ ] Run packet capturing code in real world and begin collecting data.
-[ ] Solidify team roles.
-[ ] Agree on which visualizations we will use.
+[ ] Run packet capturing code in real world and begin collecting data.  
+[ ] Solidify team roles.  
+[ ] Agree on which visualizations we will use.  
