@@ -1,7 +1,11 @@
 # hunter-hottest-sites
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 A visualization of Hunter students' packets, sniffed with Wireshark and Pyshark.
+=======
+A visualization of Hunter students' packets, sniffed with Wireshark/Pyshark.
+>>>>>>> 6bdf25ce1126782f2e858fa996f76264569f1c31
 =======
 A visualization of Hunter students' packets, sniffed with Wireshark.
 >>>>>>> 19054be786184730257dc501dc5c29776263e6ca
