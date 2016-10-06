@@ -14,11 +14,6 @@ d = {}
 
 def examinePacket(pkt):
 
-
-    # if (pkt == 0):
-    #     print "saw the 0!"
-    #     return
-
     try:
         destIP = str(pkt.ip.dst)    #strips the destination of the packet (in IP format)
         srcIP = str(pkt.ip.src)     #strips the source of the packet (IP of device)
@@ -51,7 +46,7 @@ def examinePacket(pkt):
 
 
     if(int(time.time()) > endTime ):
-        #print "Reached my time limit and wrote to JSON"
+        print "Reached my time limit and wrote to JSON"
         writeJson(d)
 
 

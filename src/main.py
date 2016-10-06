@@ -9,7 +9,7 @@ def main():
     p = multiprocessing.Process(target=startCapture, name="startCapture")
     p.start()
 
-    time.sleep(63)   #Time to run capture
+    time.sleep(66)   #Time to run capture
 
     p.terminate()
     p.join()
