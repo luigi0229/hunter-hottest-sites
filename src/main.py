@@ -16,10 +16,7 @@ def main():
     p.join()
     print "Packet pacture terminated"
 
-
-
     #writeJson()
-
 
 
 main()
