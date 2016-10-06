@@ -1,6 +1,6 @@
 # hunter-hottest-sites
 
-A visualization of Hunter students' packets, sniffed with Wireshark.
+A visualization of Hunter students' packets, sniffed with Wireshark/Pyshark.
 
 ## Our Team
 
