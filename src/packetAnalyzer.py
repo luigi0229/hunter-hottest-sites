@@ -1,20 +1,19 @@
 
 from sites import *
-#from sniff import writeJson
 import math
-import json
 import pyshark
 import socket
 from jsonExport import *
 import time
+from datetime import datetime, timedelta
+
+global endTime
+endTime = int(time.time()) + 60
 
 d = {}
 
-
 def examinePacket(pkt):
 
-    global d
-    #print "At examine packet"
 
     # if (pkt == 0):
     #     print "saw the 0!"
@@ -50,7 +49,10 @@ def examinePacket(pkt):
         print "site count: ", len(d)
         print "-------------------------------------------------------"
 
-    #writeJson(d)
+
+    if(int(time.time()) > endTime ):
+        #print "Reached my time limit and wrote to JSON"
+        writeJson(d)
 
 
 def startCapture():

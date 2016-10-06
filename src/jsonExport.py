@@ -2,10 +2,9 @@ import packetAnalyzer
 import json
 from sites import *
 import time
-#from sniff import *
 
 
-def writeJson():  #not yet implemented
+def writeJson(d):  #not yet implemented
 
 	with open('data.json', 'w') as fp:
 

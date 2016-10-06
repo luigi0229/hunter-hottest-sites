@@ -43,14 +43,14 @@ class SiteData:
 
     def getJSON(self):
         jsonD = {self.siteName: {"totalPackets": self.trafficCount, "trafficLength": sizeof_fmt(self.trafficSize), "timeInterval" : "10 - 11", "IPcount": len(self.ips)}}
-        #jsonL = [{"packetNumber": self.trafficCount, "packetLength": self.trafficSize, "timeInterval" : "10 - 11", "IPcount": len(self.ips)}]
         return jsonD
 
     def __str__(self):
         return "site: " + self.siteName + "   total # of packets: " + str(self.trafficCount) +\
         "      total traffic size: " + sizeof_fmt(self.trafficSize) + "\nlist of IPs " + str([str(x) for x in self.ips])
 
-    #This function converts bytes to human readeble format. Returns a string of the size
+
+#This function converts bytes to human readeble format. Returns a string of the size
 def sizeof_fmt(num, suffix='B'):
         for unit in ['','K','M','G','T','P','E','Z']:
             if abs(num) < 1000.0:
