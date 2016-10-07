@@ -1,13 +1,92 @@
-{"ad.jp": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
-{"verizon.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
-{"amazonaws.com": {"timeInterval": "10 - 11", "totalPackets": 23, "trafficLength": "  6KB", "IPcount": 1}}
-{"com.co": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
-{"bbtec.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
-{"rr.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
-{"fbcdn.net": {"timeInterval": "10 - 11", "totalPackets": 1511, "trafficLength": "236KB", "IPcount": 1}}
-{"myvzw.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
-{"t-ipconnect.de": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
-{"facebook.com": {"timeInterval": "10 - 11", "totalPackets": 163, "trafficLength": " 36KB", "IPcount": 1}}
-{"1e100.net": {"timeInterval": "10 - 11", "totalPackets": 8, "trafficLength": "  2KB", "IPcount": 1}}
-{"ne.jp": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
-{"akamaitechnologies.com": {"timeInterval": "10 - 11", "totalPackets": 40, "trafficLength": " 11KB", "IPcount": 1}}
+{"slickdeals.net": {"timeInterval": "10 - 11", "totalPackets": 230, "trafficLength": " 49KB", "IPcount": 1}}
+{"cloudfront.net": {"timeInterval": "10 - 11", "totalPackets": 187, "trafficLength": " 30KB", "IPcount": 3}}
+{"mopera.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "168B", "IPcount": 1}}
+{"vpn": {"timeInterval": "10 - 11", "totalPackets": 46, "trafficLength": "  6KB", "IPcount": 1}}
+{"attdns.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "132B", "IPcount": 1}}
+{"in-addr.arpa": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "193B", "IPcount": 1}}
+{"proxad.net": {"timeInterval": "10 - 11", "totalPackets": 5, "trafficLength": "  4KB", "IPcount": 4}}
+{"cosmote.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
+{"teamviewer.com": {"timeInterval": "10 - 11", "totalPackets": 48, "trafficLength": "  7KB", "IPcount": 1}}
+{"ctinets.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  1KB", "IPcount": 1}}
+{"btopenworld.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
+{"benlag.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"1drv.com": {"timeInterval": "10 - 11", "totalPackets": 3764, "trafficLength": "  2MB", "IPcount": 7}}
+{"ge.com": {"timeInterval": "10 - 11", "totalPackets": 4, "trafficLength": "  3KB", "IPcount": 4}}
+{"optonline.net": {"timeInterval": "10 - 11", "totalPackets": 329, "trafficLength": "179KB", "IPcount": 1}}
+{"co.uk": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"your-server.de": {"timeInterval": "10 - 11", "totalPackets": 15, "trafficLength": "  4KB", "IPcount": 1}}
+{"aaplimg.com": {"timeInterval": "10 - 11", "totalPackets": 15864, "trafficLength": "  2MB", "IPcount": 3}}
+{"a-msedge.net": {"timeInterval": "10 - 11", "totalPackets": 107, "trafficLength": " 20KB", "IPcount": 1}}
+{"queryfoundry.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "132B", "IPcount": 1}}
+{"sbcglobal.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "531B", "IPcount": 1}}
+{"myvzw.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"comcast.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"securedservers.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"com.cn": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"com.co": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  1KB", "IPcount": 1}}
+{"comunitel.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
+{"net.au": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "169B", "IPcount": 1}}
+{"rijksoverheid.nl": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "132B", "IPcount": 1}}
+{"washington.edu": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
+{"choopa.com": {"timeInterval": "10 - 11", "totalPackets": 9, "trafficLength": "  1KB", "IPcount": 1}}
+{"googleusercontent.com": {"timeInterval": "10 - 11", "totalPackets": 107, "trafficLength": " 21KB", "IPcount": 2}}
+{"gorge.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "562B", "IPcount": 1}}
+{"hamarmedia.no": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "172B", "IPcount": 1}}
+{"kmtn.ru": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"btcentralplus.com": {"timeInterval": "10 - 11", "totalPackets": 2, "trafficLength": "  2KB", "IPcount": 2}}
+{"yahoo.com": {"timeInterval": "10 - 11", "totalPackets": 89, "trafficLength": " 25KB", "IPcount": 1}}
+{"aruba.it": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"level3.net": {"timeInterval": "10 - 11", "totalPackets": 2, "trafficLength": "  2KB", "IPcount": 2}}
+{"kpn.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "507B", "IPcount": 1}}
+{"canonical.com": {"timeInterval": "10 - 11", "totalPackets": 15, "trafficLength": "  2KB", "IPcount": 1}}
+{"my-tss.com": {"timeInterval": "10 - 11", "totalPackets": 12, "trafficLength": "  2KB", "IPcount": 1}}
+{"net.br": {"timeInterval": "10 - 11", "totalPackets": 5, "trafficLength": "  4KB", "IPcount": 5}}
+{"planet.nl": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"msn.com": {"timeInterval": "10 - 11", "totalPackets": 111, "trafficLength": "106KB", "IPcount": 2}}
+{"telavivwifi.com": {"timeInterval": "10 - 11", "totalPackets": 50, "trafficLength": "  6KB", "IPcount": 1}}
+{"sonic.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"nltelcom.net": {"timeInterval": "10 - 11", "totalPackets": 42, "trafficLength": "  5KB", "IPcount": 1}}
+{"co.za": {"timeInterval": "10 - 11", "totalPackets": 3, "trafficLength": "  2KB", "IPcount": 3}}
+{"ows.fr": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"ono.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"com.tw": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "563B", "IPcount": 1}}
+{"netvigator.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "153B", "IPcount": 1}}
+{"cuny.edu": {"timeInterval": "10 - 11", "totalPackets": 13, "trafficLength": "  7KB", "IPcount": 1}}
+{"sl-reverse.com": {"timeInterval": "10 - 11", "totalPackets": 382, "trafficLength": " 50KB", "IPcount": 2}}
+{"fbcdn.net": {"timeInterval": "10 - 11", "totalPackets": 5929, "trafficLength": "893KB", "IPcount": 4}}
+{"amazonaws.com": {"timeInterval": "10 - 11", "totalPackets": 646, "trafficLength": "327KB", "IPcount": 7}}
+{"telia.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  1KB", "IPcount": 1}}
+{"telecomitalia.it": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "220B", "IPcount": 1}}
+{"rogers.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
+{"romaninternet.com": {"timeInterval": "10 - 11", "totalPackets": 53, "trafficLength": "  7KB", "IPcount": 1}}
+{"edu.ie": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"apple.com": {"timeInterval": "10 - 11", "totalPackets": 2, "trafficLength": "248B", "IPcount": 1}}
+{"1e100.net": {"timeInterval": "10 - 11", "totalPackets": 4514, "trafficLength": "  1MB", "IPcount": 11}}
+{"choopa.net": {"timeInterval": "10 - 11", "totalPackets": 204, "trafficLength": " 26KB", "IPcount": 1}}
+{"com.br": {"timeInterval": "10 - 11", "totalPackets": 52, "trafficLength": "  8KB", "IPcount": 3}}
+{"bbox.fr": {"timeInterval": "10 - 11", "totalPackets": 2, "trafficLength": "941B", "IPcount": 2}}
+{"comcastbusiness.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "495B", "IPcount": 1}}
+{"setaptr.net": {"timeInterval": "10 - 11", "totalPackets": 60, "trafficLength": "  8KB", "IPcount": 1}}
+{"hiweb.ir": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "316B", "IPcount": 1}}
+{"mcast.net": {"timeInterval": "10 - 11", "totalPackets": 84, "trafficLength": " 10KB", "IPcount": 6}}
+{"t-ipconnect.de": {"timeInterval": "10 - 11", "totalPackets": 4, "trafficLength": "  3KB", "IPcount": 4}}
+{"akamaitechnologies.com": {"timeInterval": "10 - 11", "totalPackets": 381, "trafficLength": " 58KB", "IPcount": 9}}
+{"mchsi.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"cantv.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "220B", "IPcount": 1}}
+{"telefonica.de": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "132B", "IPcount": 1}}
+{"fandm.edu": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
+{"online.no": {"timeInterval": "10 - 11", "totalPackets": 3, "trafficLength": "  2KB", "IPcount": 3}}
+{"otenet.gr": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"facebook.com": {"timeInterval": "10 - 11", "totalPackets": 1957, "trafficLength": "640KB", "IPcount": 10}}
+{"ne.jp": {"timeInterval": "10 - 11", "totalPackets": 3, "trafficLength": "392B", "IPcount": 3}}
+{"insnw.net": {"timeInterval": "10 - 11", "totalPackets": 51, "trafficLength": "  9KB", "IPcount": 1}}
+{"bhn.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
+{"dokom21.de": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "180B", "IPcount": 1}}
+{"cox.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
+{"dimenoc.com": {"timeInterval": "10 - 11", "totalPackets": 47, "trafficLength": "  6KB", "IPcount": 1}}
+{"quikefall.com": {"timeInterval": "10 - 11", "totalPackets": 9, "trafficLength": "  1KB", "IPcount": 1}}
+{"broadcasthost": {"timeInterval": "10 - 11", "totalPackets": 220, "trafficLength": " 63KB", "IPcount": 5}}
+{"zoominternet.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "531B", "IPcount": 1}}
+{"gatech.edu": {"timeInterval": "10 - 11", "totalPackets": 19, "trafficLength": "  3KB", "IPcount": 1}}
+{"google.com": {"timeInterval": "10 - 11", "totalPackets": 2, "trafficLength": "312B", "IPcount": 1}}
+{"charter.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
