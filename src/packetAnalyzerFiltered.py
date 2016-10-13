@@ -17,17 +17,32 @@ d = {}
 def examinePacket(pkt):
     global trigger
     try:
-        destIP = str(pkt.ip.dst)    #strips the destination of the packet (in IP format)
+        destIP = "nothing"    #strips the destination of the packet (in IP format)
         srcIP = str(pkt.ip.src)     #strips the source of the packet (IP of device)
         traffic = int(pkt.length)   #strips the length of the packet
 
         if (destIP[0:3] == "146"):  #Filters anything with a 146 address on the first octect (These are hunter's network addresses)
                 return
 
-        try:
-            destIP = socket.gethostbyaddr(destIP)[0]    #Converts IP to hostname (if it exists)
-            destIP = destIP.split('.',destIP.count('.')-1)[-1]
+        if "facebook" in str(pkt):
+            destIP = "Facebook"
 
+        if "netflix" in str(pkt):
+            destIP = "Netflix"
+
+        if "youtube" in str(pkt):
+            destIP = "Youtube"
+
+        if "instagram" in str(pkt):
+            destIP = "Instagram"
+
+        if "amazon" in str(pkt):
+            destIP = "Amazon"
+
+        if "git" in str(pkt):
+            destIP = "GitHub"
+
+        if destIP != "nothing":
             if not destIP in d:                         #Creates a new instance of the class, adds it to a dictionary (d), and the hostname is the key
                 d[destIP] = SiteData(destIP)
 
@@ -35,8 +50,6 @@ def examinePacket(pkt):
             d[destIP].incrementCount()
             d[destIP].incrementTraffic(traffic)
 
-        except socket.herror as e:
-            pass
 
     except AttributeError as e:
         pass
@@ -53,6 +66,6 @@ def examinePacket(pkt):
         trigger = False
 
 
-def startCapture():
+def startCapture2():
     capture = pyshark.LiveCapture(interface='en0', only_summaries=False)    #creates a new pyshark object with a specific interface and desired parameters 
     capture.apply_on_packets(examinePacket)                                 #sends every packet to the examinePAcket function above to examine them

@@ -1,0 +1,5 @@
+{"Youtube": {"timeInterval": "10 - 11", "totalPackets": 3, "trafficLength": "  1KB", "IPcount": 2}}
+{"Amazon": {"timeInterval": "10 - 11", "totalPackets": 14, "trafficLength": "  3KB", "IPcount": 2}}
+{"GitHub": {"timeInterval": "10 - 11", "totalPackets": 16, "trafficLength": " 18KB", "IPcount": 10}}
+{"Facebook": {"timeInterval": "10 - 11", "totalPackets": 6, "trafficLength": "  2KB", "IPcount": 3}}
+{"Instagram": {"timeInterval": "10 - 11", "totalPackets": 35, "trafficLength": " 14KB", "IPcount": 2}}

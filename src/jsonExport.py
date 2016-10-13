@@ -6,8 +6,7 @@ import time
 
 def writeJson(d):  #not yet implemented
 
-	with open('data.json', 'w') as fp:
-
+	with open('data2.json', 'w') as fp:
 		for key in d:
 			json.dump(d[key].getJSON(), fp)
 			fp.write('\n')
