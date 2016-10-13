@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 
 trigger = True
 global endTime
-endTime = int(time.time()) + 150
+endTime = int(time.time()) + 300
 
 
 d = {}
