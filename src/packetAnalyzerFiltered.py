@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 
 trigger = True
 global endTime
-endTime = int(time.time()) + 150
+endTime = int(time.time()) + 300
 
 
 d = {}
@@ -62,10 +62,14 @@ def examinePacket(pkt):
 
     if(int(time.time()) > endTime and trigger == True):
         print "Writting to json"
-        writeJson(d)
+        writeJson2(d)
         trigger = False
 
 
 def startCapture2():
+<<<<<<< HEAD
     capture = pyshark.LiveCapture(interface='en0s asdf', only_summaries=False)    #creates a new pyshark object with a specific interface and desired parameters 
+=======
+    capture = pyshark.LiveCapture(interface='en0', only_summaries=False)    #creates a new pyshark object with a specific interface and desired parameters
+>>>>>>> bb71a2585c1512d4242d2efaf2847b02745e8708
     capture.apply_on_packets(examinePacket)                                 #sends every packet to the examinePAcket function above to examine them
