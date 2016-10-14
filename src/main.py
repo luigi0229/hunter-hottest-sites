@@ -9,9 +9,9 @@ import multiprocessing
 def main():  
     global trigger
     #p = multiprocessing.Process(target=startCapture, name="startCapture")
-    p = multiprocessing.Process(target=startCapture2, name="startCapture") 
+    p = multiprocessing.Process(target=startCapture, name="startCapture") 
     p.start()
-    time.sleep(180)   #Time to run capture
+    time.sleep(1200)   #Time to run capture
 
     #time.sleep(2)
 
