@@ -9,11 +9,8 @@ from datetime import datetime, timedelta
 
 trigger = True
 global endTime
-<<<<<<< HEAD
 endTime = int(time.time()) + 1000
-=======
 endTime = int(time.time()) + 300
->>>>>>> bb71a2585c1512d4242d2efaf2847b02745e8708
 
 
 d = {}
