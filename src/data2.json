@@ -70,9 +70,7 @@
 {"completel.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
 {"tj.cn": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "134B", "IPcount": 1}}
 {"clearwire-wmx.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "  2KB", "IPcount": 1}}
-=======
 {"Amazon": {"timeInterval": "10 - 11", "totalPackets": 23, "trafficLength": " 16KB", "IPcount": 2}}
 {"GitHub": {"timeInterval": "10 - 11", "totalPackets": 10, "trafficLength": " 10KB", "IPcount": 7}}
 {"Facebook": {"timeInterval": "10 - 11", "totalPackets": 5, "trafficLength": "839B", "IPcount": 2}}
 {"Netflix": {"timeInterval": "10 - 11", "totalPackets": 2, "trafficLength": "468B", "IPcount": 1}}
->>>>>>> bb71a2585c1512d4242d2efaf2847b02745e8708
