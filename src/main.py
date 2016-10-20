@@ -11,7 +11,7 @@ def main():
     #p = multiprocessing.Process(target=startCapture, name="startCapture")
     p = multiprocessing.Process(target=startCapture, name="startCapture") 
     p.start()
-    time.sleep(1200)   #Time to run capture
+    time.sleep(15)   #Time to run capture
     
     #p2 = multiprocessing.Process(target=startCapture2, name="startCapture") 
     #p2.start()
