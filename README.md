@@ -1,8 +1,7 @@
 # hunter-hottest-sites
 
 
-A visualization of Hunter students' packets, sniffed with Wireshark and Pyshark.
-
+This project displays several visualizations of Hunter students' packets, sniffed with Wireshark and Pyshark. Each category will be displayed with statistics, such as Social, academic, shopping, etc. One graph alone will have each site within that category.
 
 ## Our Team
 
