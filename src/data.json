@@ -1,34 +1,8 @@
-{"": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "111B", "IPcount": 1}}
-{"telavivwifi.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "115B", "IPcount": 1}}
-{"akamaitechnologies.com": {"timeInterval": "10 - 11", "totalPackets": 29, "trafficLength": "  6KB", "IPcount": 3}}
-{"cloudfront.net": {"timeInterval": "10 - 11", "totalPackets": 24, "trafficLength": "  6KB", "IPcount": 2}}
-{"stackoverflow.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "126B", "IPcount": 1}}
-{"unitymediagroup.de": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "147B", "IPcount": 1}}
-{"leaseweb.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "115B", "IPcount": 1}}
-{"choopa.net": {"timeInterval": "10 - 11", "totalPackets": 2, "trafficLength": "222B", "IPcount": 1}}
-{"sl-reverse.com": {"timeInterval": "10 - 11", "totalPackets": 14, "trafficLength": "  2KB", "IPcount": 2}}
-{"wbond.net": {"timeInterval": "10 - 11", "totalPackets": 105, "trafficLength": " 15KB", "IPcount": 1}}
-{"rr.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "153B", "IPcount": 1}}
-{"fbcdn.net": {"timeInterval": "10 - 11", "totalPackets": 3432, "trafficLength": "539KB", "IPcount": 2}}
-{"suddenlink.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "139B", "IPcount": 1}}
-{"above.net": {"timeInterval": "10 - 11", "totalPackets": 5, "trafficLength": "678B", "IPcount": 1}}
-{"amazonaws.com": {"timeInterval": "10 - 11", "totalPackets": 45, "trafficLength": "  9KB", "IPcount": 6}}
-{"facebook.com": {"timeInterval": "10 - 11", "totalPackets": 364, "trafficLength": " 92KB", "IPcount": 2}}
-{"com.ar": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "150B", "IPcount": 1}}
-{"mcast.net": {"timeInterval": "10 - 11", "totalPackets": 4, "trafficLength": "504B", "IPcount": 2}}
-{"ne.jp": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "139B", "IPcount": 1}}
-{"slicehost.net": {"timeInterval": "10 - 11", "totalPackets": 2, "trafficLength": "276B", "IPcount": 1}}
-{"googleusercontent.com": {"timeInterval": "10 - 11", "totalPackets": 2, "trafficLength": "276B", "IPcount": 2}}
-{"dimenoc.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "111B", "IPcount": 1}}
-{"1e100.net": {"timeInterval": "10 - 11", "totalPackets": 749, "trafficLength": "154KB", "IPcount": 15}}
-{"broadcasthost": {"timeInterval": "10 - 11", "totalPackets": 4, "trafficLength": "  1KB", "IPcount": 4}}
-{"vpn": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "111B", "IPcount": 1}}
-{"googlehosted.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "126B", "IPcount": 1}}
-{"com.br": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "111B", "IPcount": 1}}
-{"100tb.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "111B", "IPcount": 1}}
-{"aaplimg.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "162B", "IPcount": 1}}
-{"charter.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "138B", "IPcount": 1}}
-{"voxility.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "111B", "IPcount": 1}}
-{"my-tss.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "111B", "IPcount": 1}}
-{"opendns.com": {"timeInterval": "10 - 11", "totalPackets": 2, "trafficLength": "334B", "IPcount": 1}}
-{"setaptr.net": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "115B", "IPcount": 1}}
+[{"googlehosted.com": {"timeInterval": "10 - 11", "totalPackets": 28, "trafficLength": "  5KB", "IPcount": 1}},
+{"akamaitechnologies.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "126B", "IPcount": 1}},
+{"charter.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "149B", "IPcount": 1}},
+{"facebook.com": {"timeInterval": "10 - 11", "totalPackets": 21, "trafficLength": "  5KB", "IPcount": 1}},
+{"amazonaws.com": {"timeInterval": "10 - 11", "totalPackets": 60, "trafficLength": " 14KB", "IPcount": 1}},
+{"1e100.net": {"timeInterval": "10 - 11", "totalPackets": 169, "trafficLength": " 27KB", "IPcount": 5}},
+{"leetcode.com": {"timeInterval": "10 - 11", "totalPackets": 4, "trafficLength": "696B", "IPcount": 1}}
+]
