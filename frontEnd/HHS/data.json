@@ -1,0 +1,83 @@
+[{  
+   "id":0,
+   "name":"Slickdeals.net",
+   "r":50
+},
+{  
+   "id":0,
+   "name":"Cloudfront.net",
+   "r":40
+},
+{  
+   "id":0,
+   "name":"Teamviewer.com",
+   "r":30,
+   "totalPackets":300
+},
+{  
+   "id":0,
+   "name":"Yahoo.com",
+   "r":30,
+   "totalPackets":300
+
+},
+{  
+   "id":0,
+   "name":"msn.com",
+   "r":40,
+   "totalPackets":300
+},
+{  
+   "id":0,
+   "name":"cuny.edu",
+   "r":45,
+   "totalPackets":300
+},
+{  
+   "id":0,
+   "name":"apple.com",
+   "r":40,
+   "totalPackets":300
+},
+{  
+   "id":0,
+   "name":"facebook.com",
+   "r":40,
+   "totalPackets":300
+},
+{  
+   "id":0,
+   "name":"github.com",
+   "r":40,
+   "totalPackets":300
+},
+{  
+   "id":0,
+   "name":"facebook.com",
+   "r":40,
+   "totalPackets":300
+},
+{  
+   "id":0,
+   "name":"purple.com",
+   "r":40,
+   "totalPackets":300
+},
+{  
+   "id":0,
+   "name":"facebook.com",
+   "r":40,
+   "totalPackets":300
+},
+{  
+   "id":0,
+   "name":"facebook.com",
+   "r":40,
+   "totalPackets":300
+},
+{  
+   "id":0,
+   "name":"facebook.com",
+   "r":40,
+   "totalPackets":300
+}]
