@@ -6,22 +6,21 @@ d3.json("data.json", function(error,d){
 });
 
 var width = window.innerWidth,
-    height = 450;
+    height = 650;
 
-var fill = d3.scale.category10();
+//var fill = d3.scale.category20b();
 
 var nodes = [], labels = [],
-    foci = [{x: 0, y: 250}, {x: 350, y: 150}, {x: 200, y: 150}];
+    foci = [{x: 650, y: 450}];
 
 var svg = d3.select("body").append("svg")
     .attr("width", "100%")
     .attr("height", height)
-    //.attr("domflag'');
 
 var force = d3.layout.force()
     .nodes(nodes)
     .links([])
-    .charge(-400)
+    .charge(-500)
     .gravity(0.1)
     .friction(0.8)
     .size([width, height])
@@ -36,8 +35,8 @@ function tick(e) {
 
   // Push nodes toward their designated focus.
   nodes.forEach(function(o, i) {
-    o.y += (foci[o.id].y - o.y) * k;
-    o.x += (foci[o.id].x - o.x) * k;
+    o.y += (foci[0].y - o.y) * k;
+    o.x += (foci[0].x - o.x) * k;
   });
 
   node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
@@ -50,7 +49,7 @@ var timer = setInterval(function(){
   if (nodes.length > data.length-1) { clearInterval(timer); return;}
 
   var item = data[counter];
-  nodes.push({id: item.id, r: item.r, name: item.name});
+  nodes.push({color: item.color, r: item.r, name: item.name});
   force.start();
 
   node = node.data(nodes);
@@ -67,7 +66,8 @@ var timer = setInterval(function(){
 
   n.append("circle")
       .attr("r",  function(d) { return d.r; })
-      .style("fill", function(d) { return fill(d.id); })
+      .style("fill",function(d) { return d.color;})
+      
 
   n.append("text")
       .text(function(d){
