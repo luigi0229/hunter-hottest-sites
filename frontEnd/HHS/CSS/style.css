@@ -9,6 +9,9 @@ a:hover {
   color: #fff;
 }
 
+h3{
+  font-size: 20px;
+}
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
@@ -18,12 +21,9 @@ a:hover {
   background-color: #fff;
   border: 1px solid #fff;
 }
-
-
 /*
  * Base structure
  */
-
 html,
 body {
   height: 100%;
@@ -60,7 +60,9 @@ text {
   text-anchor: middle;
   pointer-events: none;
   fill: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
 circle {
   fill: #d83000;
   stroke: white ;
@@ -95,12 +97,6 @@ circle {
   background-color: transparent;
   border-bottom-color: #fff;
 }
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  color: #fff;
-  border-bottom-color: #fff;
-}
 
 @media (min-width: 768px) {
   .masthead-brand {
@@ -110,7 +106,6 @@ circle {
     float: right;
   }
 }
-
 
 /*
  * Cover
@@ -124,7 +119,10 @@ circle {
   font-weight: bold;
 }
 
-
+.mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
 /*
  * Footer
  */
@@ -165,6 +163,9 @@ circle {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 900px;
+  }
+  h3{
+    font-size:35px;
   }
 }

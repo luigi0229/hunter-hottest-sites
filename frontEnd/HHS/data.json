@@ -1,7 +1,7 @@
 [{  
    "color":"green",
    "name":"Slickdeals.net",
-   "r":50
+   "r":30
 },
 {  
    "color":"red",
@@ -11,7 +11,7 @@
 {  
    "color":"blue",
    "name":"Teamviewer.com",
-   "r":30
+   "r":40
 },
 {  
    "color":"#2dbfff",
@@ -24,7 +24,7 @@
    "r":40
 },
 {  
-   "color":"purple",
+   "color":"white",
    "name":"cuny.edu",
    "r":45
 },
