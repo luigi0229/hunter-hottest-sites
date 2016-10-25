@@ -7,7 +7,7 @@ This project displays several visualizations of Hunter students' packets, sniffe
 
 **Eli**
 
-Eliazar is currently a fulltime student and part time network admin at an IT provider. His strengths lie mostly in networking and batch scripting. He really enjoys programming and building big programs/projects from scratch. The thought of having different tools and platforms communicating with each other to contribute to the same outcome is one of the aspects of computer science that fascinates him the most. His TCP/IP knowledge along with his creativity and some python scripting will be very helpful in finding what a small population of students at Hunter are mostly interested in.
+Eliazar is currently a fulltime student and part time network admin at an IT provider. His strengths lie mostly in networking and batch scripting. He really enjoys programming and building big programs/projects from scratch. His TCP/IP knowledge along with his creativity and some python scripting will be very helpful in finding what a small population of students at Hunter are mostly interested in.
 
 **Jia Yong**
 
