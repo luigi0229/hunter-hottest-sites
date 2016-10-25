@@ -26,7 +26,7 @@ h3{
  */
 html,
 body {
-  height: 100%;
+  height: 700px;
   background-color: #333;
 }
 body {
@@ -41,7 +41,6 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-
 /* Padding for spacing */
 .inner {
   padding: 30px;
@@ -68,7 +67,10 @@ circle {
   stroke: white ;
   stroke-width: 2px;
 }
-
+svg {
+    display: block;
+    margin: 0 auto;
+}
 /*
  * Header
  */
@@ -81,7 +83,7 @@ circle {
   display: inline-block;
 }
 .masthead-nav > li + li {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .masthead-nav > li > a {
   padding-right: 0;
@@ -120,13 +122,12 @@ circle {
 }
 
 .mastfoot {
-    position: fixed;
+    position: absolute;
     bottom: 0;
   }
 /*
  * Footer
  */
-
 .mastfoot {
   color: #999; /* IE8 proofing */
   color: rgba(255,255,255,.5);
@@ -144,7 +145,7 @@ circle {
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    position: absolute;
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -163,7 +164,7 @@ circle {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 900px;
+    width: 1000px;
   }
   h3{
     font-size:35px;

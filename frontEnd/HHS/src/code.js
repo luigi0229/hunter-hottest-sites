@@ -1,27 +1,36 @@
-
-var data;
+var dataSet;
 
 d3.json("data.json", function(error,d){
-  data = d;
+  dataSet = d;
 });
 
 var width = window.innerWidth,
     height = 650;
 
 var nodes = [], labels = [],
-    foci = [{x: 650, y: 450}];
+    foci = [{x: 550, y: 350}];
 
 var nodesByName = {};
 
-var svg = d3.select("body").append("svg")
-    .attr("width", "100%")
-    .attr("height", height)
+// var svg = d3.select("body").append("svg")
+//     .attr("width", "100%")
+//     .attr("height", height)
+var svg = d3.select("div#container")
+  .append("svg")
+  .attr("preserveAspectRatio", "xMinYMin meet")
+  .attr("viewBox", "0 0 1200 700")
+  .classed("svg-content", true);
 
-
+var tooltip = d3.select("body")
+  .append("div")
+  .style("position", "absolute")
+  .style("visibility", "hidden")
+  .text("test");
+  
 var force = d3.layout.force()
     .nodes(nodes)
     .links([])
-    .charge(-500)
+    .charge(-300)
     .gravity(0.1)
     .friction(0.8)
     .size([width, height])
@@ -45,99 +54,7 @@ function tick(e) {
 }
 
 
-var newData = [{  
-   "color":"green",
-   "name":"Slickdeals.net",
-   "r":100
-},
-{  
-   "color":"red",
-   "name":"Cloudfront.net",
-   "r":40
-},
-{  
-   "color":"blue",
-   "name":"Teamviewer.com",
-   "r":40
-},
-{  
-   "color":"#2dbfff",
-   "name":"Yahoo.com",
-   "r":30
-},
-{  
-   "color":"#7db1b2",
-   "name":"msn.com",
-   "r":40
-},
-{  
-   "color":"purple",
-   "name":"cuny.edu",
-   "r":45
-},
-{  
-   "color":"cyan",
-   "name":"apple.com",
-   "r":20
-},
-{  
-   "color":"#f2f205",
-   "name":"facebook.com",
-   "r":20
-},
-{  
-   "color":"orange",
-   "name":"github.com",
-   "r":20
-},
-{  
-   "color":"green",
-   "name":"spotify.com",
-   "r":20
-},
-{  
-   "color":"#800080",
-   "name":"purple.com",
-   "r":10
-},
-{  
-   "color":"red",
-   "name":"verizon.net",
-   "r":10
-},
-{  
-   "color":"red",
-   "name":"Netflix",
-   "r":10
-},
-{  
-   "color":"yellow",
-   "name":"globalcapacity.com",
-   "r":10
-},
-{  
-   "color":"yellow",
-   "name":"globalcapacity.com",
-   "r":50
-},
-{  
-   "color":"yellow",
-   "name":"globalcapacity.com",
-   "r":50
-},
-{  
-   "color":"yellow",
-   "name":"globalcapacity.com",
-   "r":50
-},
-{  
-   "color":"yellow",
-   "name":"globalcapacity.com",
-   "r":50
-}]
-
-
-setTimeout(function() { processUpdates(data) }, 3000);
+setTimeout(function() { processUpdates(dataSet) }, 3000);
 
 
 function processUpdates(sites) {
@@ -165,9 +82,9 @@ function updateNodeRadius(name, radius) {
 
 var timer = setInterval(function(){
 
-  if (nodes.length > data.length-1) { clearInterval(timer); return;}
+  if (nodes.length > dataSet.length-1) { clearInterval(timer); return;}
 
-  var item = data[counter];
+  var item = dataSet[counter];
   var nodeObject = {color: item.color, r: item.r, name: item.name};
   nodes.push(nodeObject);
   force.start();
@@ -182,6 +99,8 @@ var timer = setInterval(function(){
          var sel = d3.select(this);
          sel.moveToFront();
       })
+      .on("mouseover", function(){return tooltip.style("visibility", "visible");})
+      .on("mouseout", function(){return tooltip.style("visibility", "hidden");})
       .call(force.drag);
 
   n.append("circle")
