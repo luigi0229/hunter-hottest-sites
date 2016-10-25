@@ -12,10 +12,7 @@ var nodes = [], labels = [],
 
 var nodesByName = {};
 
-// var svg = d3.select("body").append("svg")
-//     .attr("width", "100%")
-//     .attr("height", height)
-var svg = d3.select("div#container")
+var svg = d3.select("#graph")
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
   .attr("viewBox", "0 0 1200 700")
@@ -30,7 +27,11 @@ var tooltip = d3.select("body")
 var force = d3.layout.force()
     .nodes(nodes)
     .links([])
-    .charge(-300)
+    .charge(
+            function(circle) {
+                console.log(circle.r)
+                return circle.r * -9
+            })
     .gravity(0.1)
     .friction(0.8)
     .size([width, height])
@@ -54,8 +55,13 @@ function tick(e) {
 }
 
 
-setTimeout(function() { processUpdates(dataSet) }, 3000);
+//setTimeout(function() { nodes = []; start() }, 3000);
 
+// setTimeout(function() {
+//   var nodeObject = {color: item.color, r: item.r, name: item.name};
+//    nodes.push(nodeObject);
+//   start();
+// }, 1000);
 
 function processUpdates(sites) {
   for (var i = 0; i < sites.length; i++) {
@@ -89,7 +95,7 @@ var timer = setInterval(function(){
   nodes.push(nodeObject);
   force.start();
 
-  node = node.data(nodes);
+ node = node.data(nodes);
 
   var n = node.enter().append("g")
       .attr("class", "node")
@@ -122,6 +128,18 @@ var timer = setInterval(function(){
 
   counter++;
 }, 0);
+
+function start() {
+  link = link.data(force.links(), function(d) { return d.source.id + "-" + d.target.id; });
+  link.enter().insert("line", ".node").attr("class", "link");
+  link.exit().remove();
+
+  node = node.data(force.nodes(), function(d) { return d.id;});
+  node.enter().append("circle").attr("class", function(d) { return "node " + d.id; }).attr("r", 8);
+  node.exit().remove();
+
+  force.start();
+}
 
 
 d3.selection.prototype.moveToFront = function() {

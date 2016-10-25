@@ -1,34 +1,34 @@
 [{  
    "color":"green",
    "name":"Slickdeals.net",
-   "r":30,
+   "r":45,
    "packets": 1000
 },
 {  
    "color":"red",
    "name":"Cloudfront.net",
-   "r":40
+   "r":10
 
 },
 {  
    "color":"blue",
    "name":"Teamviewer.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"#2dbfff",
    "name":"Yahoo.com",
-   "r":30
+   "r":10
 },
 {  
    "color":"#7db1b2",
    "name":"msn.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"orange",
    "name":"cuny.edu",
-   "r":45
+   "r":15
 },
 {  
    "color":"cyan",
@@ -38,17 +38,17 @@
 {  
    "color":"#f2f205",
    "name":"facebook.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"orange",
    "name":"github.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"green",
    "name":"spotify.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"#800080",
@@ -63,32 +63,139 @@
 {  
    "color":"red",
    "name":"Netflix",
-   "r":40
+   "r":10
 },
 {  
    "color":"yellow",
    "name":"globalcapacity.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"blue",
    "name":"Teamviewer.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"#2dbfff",
    "name":"Yahoo.com",
-   "r":30
+   "r":10
 },
 {  
    "color":"#7db1b2",
    "name":"msn.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"orange",
    "name":"cuny.edu",
-   "r":45
+   "r":15
+},
+{  
+   "color":"cyan",
+   "name":"apple.com",
+   "r":10
+},
+{  
+   "color":"#f2f205",
+   "name":"facebook.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"github.com",
+   "r":10
+},
+{  
+   "color":"green",
+   "name":"spotify.com",
+   "r":10
+},
+{  
+   "color":"#800080",
+   "name":"purple.com",
+   "r":10
+},
+{  
+   "color":"red",
+   "name":"verizon.net",
+   "r":10
+},
+{  
+   "color":"red",
+   "name":"Netflix",
+   "r":10
+},
+{  
+   "color":"yellow",
+   "name":"globalcapacity.com",
+   "r":10
+},
+{  
+   "color":"blue",
+   "name":"Teamviewer.com",
+   "r":10
+},
+{  
+   "color":"#2dbfff",
+   "name":"Yahoo.com",
+   "r":10
+},
+{  
+   "color":"#7db1b2",
+   "name":"msn.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"cuny.edu",
+   "r":15
+},
+{  
+   "color":"cyan",
+   "name":"apple.com",
+   "r":10
+},
+{  
+   "color":"#f2f205",
+   "name":"facebook.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"github.com",
+   "r":10
+},
+{  
+   "color":"green",
+   "name":"Slickdeals.net",
+   "r":45,
+   "packets": 1000
+},
+{  
+   "color":"red",
+   "name":"Cloudfront.net",
+   "r":10
+
+},
+{  
+   "color":"blue",
+   "name":"Teamviewer.com",
+   "r":10
+},
+{  
+   "color":"#2dbfff",
+   "name":"Yahoo.com",
+   "r":10
+},
+{  
+   "color":"#7db1b2",
+   "name":"msn.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"cuny.edu",
+   "r":15
 },
 {  
    "color":"cyan",
@@ -98,17 +205,17 @@
 {  
    "color":"#f2f205",
    "name":"facebook.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"orange",
    "name":"github.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"green",
    "name":"spotify.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"#800080",
@@ -123,32 +230,139 @@
 {  
    "color":"red",
    "name":"Netflix",
-   "r":40
+   "r":10
 },
 {  
    "color":"yellow",
    "name":"globalcapacity.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"blue",
    "name":"Teamviewer.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"#2dbfff",
    "name":"Yahoo.com",
-   "r":30
+   "r":10
 },
 {  
    "color":"#7db1b2",
    "name":"msn.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"orange",
    "name":"cuny.edu",
-   "r":45
+   "r":15
+},
+{  
+   "color":"cyan",
+   "name":"apple.com",
+   "r":10
+},
+{  
+   "color":"#f2f205",
+   "name":"facebook.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"github.com",
+   "r":10
+},
+{  
+   "color":"green",
+   "name":"spotify.com",
+   "r":10
+},
+{  
+   "color":"#800080",
+   "name":"purple.com",
+   "r":10
+},
+{  
+   "color":"red",
+   "name":"verizon.net",
+   "r":10
+},
+{  
+   "color":"red",
+   "name":"Netflix",
+   "r":10
+},
+{  
+   "color":"yellow",
+   "name":"globalcapacity.com",
+   "r":10
+},
+{  
+   "color":"blue",
+   "name":"Teamviewer.com",
+   "r":10
+},
+{  
+   "color":"#2dbfff",
+   "name":"Yahoo.com",
+   "r":10
+},
+{  
+   "color":"#7db1b2",
+   "name":"msn.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"cuny.edu",
+   "r":15
+},
+{  
+   "color":"cyan",
+   "name":"apple.com",
+   "r":10
+},
+{  
+   "color":"#f2f205",
+   "name":"facebook.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"github.com",
+   "r":10
+},
+{  
+   "color":"green",
+   "name":"Slickdeals.net",
+   "r":45,
+   "packets": 1000
+},
+{  
+   "color":"red",
+   "name":"Cloudfront.net",
+   "r":10
+
+},
+{  
+   "color":"blue",
+   "name":"Teamviewer.com",
+   "r":10
+},
+{  
+   "color":"#2dbfff",
+   "name":"Yahoo.com",
+   "r":10
+},
+{  
+   "color":"#7db1b2",
+   "name":"msn.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"cuny.edu",
+   "r":15
 },
 {  
    "color":"cyan",
@@ -158,10 +372,297 @@
 {  
    "color":"#f2f205",
    "name":"facebook.com",
-   "r":40
+   "r":10
 },
 {  
    "color":"orange",
    "name":"github.com",
+   "r":10
+},
+{  
+   "color":"green",
+   "name":"spotify.com",
+   "r":10
+},
+{  
+   "color":"#800080",
+   "name":"purple.com",
    "r":40
+},
+{  
+   "color":"red",
+   "name":"verizon.net",
+   "r":40
+},
+{  
+   "color":"red",
+   "name":"Netflix",
+   "r":10
+},
+{  
+   "color":"yellow",
+   "name":"globalcapacity.com",
+   "r":10
+},
+{  
+   "color":"blue",
+   "name":"Teamviewer.com",
+   "r":10
+},
+{  
+   "color":"#2dbfff",
+   "name":"Yahoo.com",
+   "r":10
+},
+{  
+   "color":"#7db1b2",
+   "name":"msn.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"cuny.edu",
+   "r":15
+},
+{  
+   "color":"cyan",
+   "name":"apple.com",
+   "r":10
+},
+{  
+   "color":"#f2f205",
+   "name":"facebook.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"github.com",
+   "r":10
+},
+{  
+   "color":"green",
+   "name":"spotify.com",
+   "r":10
+},
+{  
+   "color":"#800080",
+   "name":"purple.com",
+   "r":10
+},
+{  
+   "color":"red",
+   "name":"verizon.net",
+   "r":10
+},
+{  
+   "color":"red",
+   "name":"Netflix",
+   "r":10
+},
+{  
+   "color":"yellow",
+   "name":"globalcapacity.com",
+   "r":10
+},
+{  
+   "color":"blue",
+   "name":"Teamviewer.com",
+   "r":10
+},
+{  
+   "color":"#2dbfff",
+   "name":"Yahoo.com",
+   "r":10
+},
+{  
+   "color":"#7db1b2",
+   "name":"msn.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"cuny.edu",
+   "r":15
+},
+{  
+   "color":"cyan",
+   "name":"apple.com",
+   "r":10
+},
+{  
+   "color":"#f2f205",
+   "name":"facebook.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"github.com",
+   "r":10
+},
+{  
+   "color":"green",
+   "name":"Slickdeals.net",
+   "r":45,
+   "packets": 1000
+},
+{  
+   "color":"red",
+   "name":"Cloudfront.net",
+   "r":10
+
+},
+{  
+   "color":"blue",
+   "name":"Teamviewer.com",
+   "r":10
+},
+{  
+   "color":"#2dbfff",
+   "name":"Yahoo.com",
+   "r":10
+},
+{  
+   "color":"#7db1b2",
+   "name":"msn.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"cuny.edu",
+   "r":15
+},
+{  
+   "color":"cyan",
+   "name":"apple.com",
+   "r":40
+},
+{  
+   "color":"#f2f205",
+   "name":"facebook.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"github.com",
+   "r":10
+},
+{  
+   "color":"green",
+   "name":"spotify.com",
+   "r":10
+},
+{  
+   "color":"#800080",
+   "name":"purple.com",
+   "r":40
+},
+{  
+   "color":"red",
+   "name":"verizon.net",
+   "r":40
+},
+{  
+   "color":"red",
+   "name":"Netflix",
+   "r":10
+},
+{  
+   "color":"yellow",
+   "name":"globalcapacity.com",
+   "r":10
+},
+{  
+   "color":"blue",
+   "name":"Teamviewer.com",
+   "r":10
+},
+{  
+   "color":"#2dbfff",
+   "name":"Yahoo.com",
+   "r":10
+},
+{  
+   "color":"#7db1b2",
+   "name":"msn.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"cuny.edu",
+   "r":15
+},
+{  
+   "color":"cyan",
+   "name":"apple.com",
+   "r":10
+},
+{  
+   "color":"#f2f205",
+   "name":"facebook.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"github.com",
+   "r":10
+},
+{  
+   "color":"green",
+   "name":"spotify.com",
+   "r":10
+},
+{  
+   "color":"#800080",
+   "name":"purple.com",
+   "r":10
+},
+{  
+   "color":"red",
+   "name":"verizon.net",
+   "r":10
+},
+{  
+   "color":"red",
+   "name":"Netflix",
+   "r":10
+},
+{  
+   "color":"yellow",
+   "name":"globalcapacity.com",
+   "r":10
+},
+{  
+   "color":"blue",
+   "name":"Teamviewer.com",
+   "r":10
+},
+{  
+   "color":"#2dbfff",
+   "name":"Yahoo.com",
+   "r":10
+},
+{  
+   "color":"#7db1b2",
+   "name":"msn.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"cuny.edu",
+   "r":15
+},
+{  
+   "color":"cyan",
+   "name":"apple.com",
+   "r":10
+},
+{  
+   "color":"#f2f205",
+   "name":"facebook.com",
+   "r":10
+},
+{  
+   "color":"orange",
+   "name":"github.com",
+   "r":10
 }]
