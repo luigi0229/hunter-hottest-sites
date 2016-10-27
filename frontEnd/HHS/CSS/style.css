@@ -67,9 +67,11 @@ circle {
   stroke: white ;
   stroke-width: 2px;
 }
+
 svg {
+    max-width:100%; 
     display: block;
-    margin: 0 auto;
+    margin: auto;
 }
 /*
  * Header
@@ -169,4 +171,10 @@ svg {
   h3{
     font-size:35px;
   }
+
+svg {
+    max-width:100%; 
+    max-height: 100%;
+    margin-top: 8%;
+}
 }

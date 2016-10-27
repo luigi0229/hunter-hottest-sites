@@ -1,8 +1,20 @@
-var dataSet;
+var dataSet = null;
 
 d3.json("data.json", function(error,d){
   dataSet = d;
 });
+//this only works if we disable caching
+var current = null;
+setInterval(function() {
+    $.getJSON("data.json", function(json) {
+        current = JSON.stringify(json);  
+        oldDataset = JSON.stringify(dataSet); 
+        if (oldDataset  !== current) {
+            location.reload();
+        }
+        oldDataSt = current;
+    });                       
+}, 10000);   
 
 var width = window.innerWidth,
     height = 650;
@@ -15,7 +27,7 @@ var nodesByName = {};
 var svg = d3.select("#graph")
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "0 0 1200 700")
+  .attr("viewBox", "0 0 1200 800")
   .classed("svg-content", true);
 
 var tooltip = d3.select("body")
@@ -29,8 +41,7 @@ var force = d3.layout.force()
     .links([])
     .charge(
             function(circle) {
-                console.log(circle.r)
-                return circle.r * -9
+                return circle.r * -10
             })
     .gravity(0.1)
     .friction(0.8)
@@ -128,19 +139,6 @@ var timer = setInterval(function(){
 
   counter++;
 }, 0);
-
-function start() {
-  link = link.data(force.links(), function(d) { return d.source.id + "-" + d.target.id; });
-  link.enter().insert("line", ".node").attr("class", "link");
-  link.exit().remove();
-
-  node = node.data(force.nodes(), function(d) { return d.id;});
-  node.enter().append("circle").attr("class", function(d) { return "node " + d.id; }).attr("r", 8);
-  node.exit().remove();
-
-  force.start();
-}
-
 
 d3.selection.prototype.moveToFront = function() {
   return this.each(function(){
