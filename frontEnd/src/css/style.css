@@ -73,9 +73,12 @@ svg {
     display: block;
     margin: auto;
 }
+/*Mouseover Display*/
 .tooltip{
   top: 30%;
-  right: 10%;
+  right: 0;
+  line-height: 10px;
+  font-size: 10px;
 }
 
 /*About Me dialog*/
@@ -97,7 +100,7 @@ svg {
   z-index: 9999;
 }
 .popup-mobile {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   margin: 30px 0 0;
@@ -216,5 +219,11 @@ svg {
     max-width:100%; 
     max-height: 100%;
     margin-top: 8%;
+}
+.tooltip{
+  top: 30%;
+  right: 5%;
+  line-height: 20px;
+  font-size: 15px;
 }
 }

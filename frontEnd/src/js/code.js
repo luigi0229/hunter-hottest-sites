@@ -104,7 +104,11 @@ var timer = setInterval(function(){
   if (nodes.length > dataSet.length-1) { clearInterval(timer); return;}
 
   var item = dataSet[counter];
-  var nodeObject = {color: item.color, r: item.r, name: item.name, size: item.size, packet: item.packets, user: item.users};
+  var nodeObject = {color: item.color, r: item.r,
+                    name: item.name, size: item.size,
+                    packet: item.packets, user: item.users,
+                    fseen: item.firstSeen, lseen: item.lastSeen
+                    };
   nodes.push(nodeObject);
   force.start();
 
@@ -114,14 +118,18 @@ var timer = setInterval(function(){
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
       .style('cursor', 'pointer')
-      .on('mousedown', function() {
-         var sel = d3.select(this);
-         sel.moveToFront();
-      })
+      // .on('mousedown', function() {
+      //    var sel = d3.select(this);
+      //    sel.moveToFront();
+      // })
       .on("mouseover", function(){
           var coords = d3.select(this)[0][0];
           var app = tooltip.style("visibility", "visible");
-          return app.html("Site: " + coords.__data__.name + "<br/>" 
+          var sel = d3.select(this);
+         sel.moveToFront();
+          return app.html("Site Name: " + coords.__data__.name + "<br/>" 
+            + "First Seen: " + coords.__data__.fseen + "<br/>" 
+            + "Last Seen: " + coords.__data__.lseen + "<br/>" 
             + "Packets: " + coords.__data__.packet + "<br/>"
             + "Size: " + coords.__data__.size + "<br/>" 
             + "User: " + coords.__data__.user);

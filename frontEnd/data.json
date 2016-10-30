@@ -4,7 +4,9 @@
    "r":100,
    "packets": 1000,
    "size": "123KB",
-   "users": 43
+   "users": 43,
+   "firstSeen": "12:30 AM",
+   "lastSeen": "12:33 AM"
 },
 {  
    "color":"red",
@@ -12,5 +14,7 @@
    "r":50,
    "packets": 1002,
    "size": "133KB",
-   "users": 43
+   "users": 45,
+   "firstSeen": "12:30 AM",
+   "lastSeen": "12:33 AM"
 }]
