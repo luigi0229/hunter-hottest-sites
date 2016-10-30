@@ -3,7 +3,8 @@ var dataSet = null;
 d3.json("data.json", function(error,d){
   dataSet = d;
 });
-//this only works if we disable caching
+
+//disable caching
 var current = null;
 setInterval(function() {
     $.getJSON("data.json", function(json) {
@@ -32,9 +33,10 @@ var svg = d3.select("#graph")
 
 var tooltip = d3.select("body")
   .append("div")
+  .attr("class","tooltip")
   .style("position", "absolute")
   .style("visibility", "hidden")
-  .text("test");
+  .text("#")
   
 var force = d3.layout.force()
     .nodes(nodes)
@@ -102,7 +104,7 @@ var timer = setInterval(function(){
   if (nodes.length > dataSet.length-1) { clearInterval(timer); return;}
 
   var item = dataSet[counter];
-  var nodeObject = {color: item.color, r: item.r, name: item.name};
+  var nodeObject = {color: item.color, r: item.r, name: item.name, size: item.size, packet: item.packets, user: item.users};
   nodes.push(nodeObject);
   force.start();
 
@@ -116,8 +118,17 @@ var timer = setInterval(function(){
          var sel = d3.select(this);
          sel.moveToFront();
       })
-      .on("mouseover", function(){return tooltip.style("visibility", "visible");})
-      .on("mouseout", function(){return tooltip.style("visibility", "hidden");})
+      .on("mouseover", function(){
+          var coords = d3.select(this)[0][0];
+          var app = tooltip.style("visibility", "visible");
+          return app.html("Site: " + coords.__data__.name + "<br/>" 
+            + "Packets: " + coords.__data__.packet + "<br/>"
+            + "Size: " + coords.__data__.size + "<br/>" 
+            + "User: " + coords.__data__.user);
+        })
+      .on("mouseout", function(){
+        return tooltip.style("visibility", "hidden");
+      })
       .call(force.drag);
 
   n.append("circle")
@@ -153,3 +164,39 @@ function resize() {
 }
 
 d3.select(window).on('resize', resize);
+
+ // Popup Window
+ $(document).ready(function(){
+        var scrollTop = '';
+        var newHeight = '100';
+
+        $(window).bind('scroll', function() {
+           scrollTop = $( window ).scrollTop();
+           newHeight = scrollTop + 100;
+        });
+        
+        $('.about').click(function(e) {
+         e.stopPropagation();
+         if(jQuery(window).width() < 767) {
+           $(this).after( $( ".popup" ) );
+           $('.popup').show().addClass('popup-mobile').css('top', 0).focus();
+           $('html, body').animate({
+                scrollTop: $('.popup').offset().top
+            }, 500);   
+         } else {
+           $('.popup').removeClass('popup-mobile').css('top', newHeight).toggle().focus();
+         };
+        });
+        
+        $('html').click(function() {
+         $('.popup').hide();
+        });
+
+        $('.popup-btn-close').click(function(e){
+          $('.popup').hide();
+        });
+
+        $('.popup').click(function(e){
+          e.stopPropagation();
+        });
+});

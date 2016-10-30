@@ -1,12 +1,16 @@
 [{  
    "color":"green",
    "name":"Slickdeals.net",
-   "r":45,
-   "packets": 1000
+   "r":100,
+   "packets": 1000,
+   "size": "123KB",
+   "users": 43
 },
 {  
    "color":"red",
    "name":"Cloudfront.net",
-   "r":50
-
+   "r":50,
+   "packets": 1002,
+   "size": "133KB",
+   "users": 43
 }]
