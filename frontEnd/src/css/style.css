@@ -1,8 +1,4 @@
-/*
- * Globals
- */
 
-/* Links */
 a,
 a:focus,
 a:hover {
@@ -12,18 +8,7 @@ a:hover {
 h3{
   font-size: 20px;
 }
-/* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
-}
-/*
- * Base structure
- */
+
 html,
 body {
   height: 700px;
@@ -34,8 +19,6 @@ body {
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
 
 .cover-container {
   margin-right: auto;
@@ -67,11 +50,28 @@ circle {
   stroke: white ;
   stroke-width: 2px;
 }
+/*Buttons*/
 
-svg {
-    max-width:100%; 
-    display: block;
-    margin: auto;
+.btnUser{
+    position:absolute;
+    left: 15%;
+    top: 15%;
+    cursor:pointer;
+}
+.btnTraffic{
+    position:absolute;
+    left: 20%;
+    top: 15%;
+    cursor:pointer;
+
+}
+
+.btnPacket{
+  position: absolute;
+  left: 25%;
+  top: 15%;
+  cursor:pointer;
+
 }
 /*Mouseover Display*/
 .tooltip{
@@ -98,6 +98,8 @@ svg {
   text-align:left;
   border: 10px solid #150E2D;
   z-index: 9999;
+  text-shadow: none;
+
 }
 .popup-mobile {
   position: absolute;
@@ -201,7 +203,7 @@ svg {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 100%; 
   }
 }
 
@@ -214,12 +216,6 @@ svg {
   h3{
     font-size:35px;
   }
-
-svg {
-    max-width:100%; 
-    max-height: 100%;
-    margin-top: 8%;
-}
 .tooltip{
   top: 30%;
   right: 5%;
