@@ -1,32 +1,16 @@
-var userData = null;
-var trafficData = null;
-var packetData = null;
+var dataSet;
+
+d3.json("data.json", function(data) {
+  dataSet = data;
+});
 
 // update files
 setInterval(function() {
-    d3.json("user.json", function(data) {
-      d3.json("traffic.json", function(traffic) {
-        d3.json("packets.json",function(packet){
-          userData = data;
-          trafficData = traffic;
-          packetData = packet;
-        });
-    });
+    d3.json("data.json", function(data) {
+    dataSet = data;
   });                     
-}, 1000);   
-
-//disable caching
-// var current = null;
-// setInterval(function() {
-//     d3.json("data.json", function(json) {
-//         current = JSON.stringify(json);  
-//         olduserData = JSON.stringify(userData); 
-//         if (olduserData  !== current) {
-//             redraw(json)
-//         }
-//         oldDataSt = current;
-//     });                       
-// }, 10000);   
+}, 10000);   
+  
 
 var width = window.innerWidth,
     height = 650;
@@ -43,6 +27,7 @@ var svg = d3.select("#graph")
   .attr("preserveAspectRatio", "xMinYMin meet")
   .attr("viewBox", "0 0 1200 800")
   .classed("svg-content", true);
+
 // display descriptions
 var tooltip = d3.select("body")
   .append("div")
@@ -52,22 +37,23 @@ var tooltip = d3.select("body")
 
   // Button for traffic graph
   d3.select("#graph").append("button").text("User")
-  .attr("float", "left").attr("class","btnUser")
+  .attr("float", "left").attr("id","btnUser")
   .on("click",function(){
-      return redraw(userData);
+      return redraw(dataSet,"user");
     })
   // User graph
   d3.select("#graph").append("button").text("Traffic")
-  .attr("float", "left").attr("class","btnTraffic")
+  .attr("float", "left").attr("id","btnTraffic")
   .on("click",function(){ 
-      return redraw(trafficData);
+      return redraw(dataSet,"traffic");
     })
     // Packets graph
   d3.select("#graph").append("button").text("Packets")
-    .attr("float", "left").attr("class","btnPacket")
+    .attr("float", "left").attr("id","btnPacket")
     .on("click",function(){
-        return redraw(packetData);
+        return redraw(dataSet,"packet");
       })
+
 var force = d3.layout.force()
     .nodes(nodes)
     .links([])
@@ -100,10 +86,10 @@ var counter = 0;
 
 var timer = setInterval(function(){
 
-  // if (nodes.length > userData.length-1) { clearInterval(timer); return;}
+  if (nodes.length > dataSet.length-1) { clearInterval(timer); return;}
 
-  var item = userData[counter];
-  var nodeObject = {color: item.color, r: item.r,
+  var item = dataSet[counter];
+  var nodeObject = {color: item.color, r: item.ru, ip: item.ServerIP,
                     name: item.name, size: item.size,
                     packet: item.packets, user: item.users,
                     fseen: item.firstSeen, lseen: item.lastSeen
@@ -132,8 +118,9 @@ var timer = setInterval(function(){
           sel.moveToFront();
 
           return app.html("Site Name: " + coords.__data__.name + "<br/>" 
+            + "ServerIP: " + coords.__data__.ip + "<br/>"        
             + "First Seen: " + coords.__data__.fseen + "<br/>" 
-            + "Last Seen: " + coords.__data__.lseen + "<br/>"         
+            + "Last Seen: " + coords.__data__.lseen + "<br/>"  
             + "Traffic: " + coords.__data__.size + "<br/>" 
             + "Packets: " + coords.__data__.packet + "<br/>"
             + "User: " + coords.__data__.user);
@@ -162,7 +149,7 @@ var timer = setInterval(function(){
 }, 0);
 
 
-function redraw(newData){
+function redraw(newData,check){
 
    svg.remove();
    svg = d3.select("#graph")
@@ -185,8 +172,6 @@ function redraw(newData){
       .size([width, height])
       .on("tick", tick);
 
-
-
   function tick(e) {
     var k = .1 * e.alpha;
 
@@ -205,12 +190,37 @@ function redraw(newData){
 
   var timer = setInterval(function(){
 
+  if (redrawNodes.length > dataSet.length-1) { clearInterval(timer); return;}
+
     var item = newData[counter];
-    var nodeObject = {color: item.color, r: item.r,
-                      name: item.name, size: item.size,
-                      packet: item.packets, user: item.users,
-                      fseen: item.firstSeen, lseen: item.lastSeen
-                      };
+
+    var nodeObject;
+
+    if(check == "user"){
+      nodeObject = {color: item.color, r: item.ru,ip: item.ServerIP,
+                    name: item.name, size: item.size,
+                    packet: item.packets, user: item.users,
+                    fseen: item.firstSeen, lseen: item.lastSeen
+                    };
+    }
+    else if(check == "traffic"){
+      nodeObject = {color: item.color, r: item.rt,ip: item.ServerIP,
+                    name: item.name, size: item.size,
+                    packet: item.packets, user: item.users,
+                    fseen: item.firstSeen, lseen: item.lastSeen
+                    };
+    }
+    else if(check == "packet"){
+      nodeObject = {color: item.color, r: item.rp,ip: item.ServerIP,
+                    name: item.name, size: item.size,
+                    packet: item.packets, user: item.users,
+                    fseen: item.firstSeen, lseen: item.lastSeen
+                    };
+    }
+    else{
+      console.log("Error, no check condition");
+    }
+
     redrawNodes.push(nodeObject);
     force.start();
 
@@ -235,6 +245,7 @@ function redraw(newData){
             sel.moveToFront();
 
             return app.html("Site Name: " + coords.__data__.name + "<br/>" 
+              + "ServerIP: " + coords.__data__.ip + "<br/>"        
               + "First Seen: " + coords.__data__.fseen + "<br/>" 
               + "Last Seen: " + coords.__data__.lseen + "<br/>"         
               + "Traffic: " + coords.__data__.size + "<br/>" 
@@ -306,39 +317,276 @@ function resize() {
 }
 
 d3.select(window).on('resize', resize);
+// FAQ page
+var debounce = function(func, wait, immediate) {
 
- // Popup Window
- $(document).ready(function(){
-        var scrollTop = '';
-        var newHeight = '100';
+  "use strict";
 
-        $(window).bind('scroll', function() {
-           scrollTop = $( window ).scrollTop();
-           newHeight = scrollTop + 100;
-        });
-        
-        $('.about').click(function(e) {
-         e.stopPropagation();
-         if(jQuery(window).width() < 767) {
-           $(this).after( $( ".popup" ) );
-           $('.popup').show().addClass('popup-mobile').css('top', 0).focus();
-           $('html, body').animate({
-                scrollTop: $('.popup').offset().top
-            }, 500);   
-         } else {
-           $('.popup').removeClass('popup-mobile').css('top', newHeight).toggle().focus();
-         };
-        });
-        
-        $('html').click(function() {
-         $('.popup').hide();
-        });
+  var timeout;
+  return function() {
+    var context = this;
+    var args = arguments;
+    var later = function() {
+      timeout = null;
+      if ( !immediate ) {
+        func.apply(context, args);
+      }
+    };
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait || 200);
+    if ( callNow ) {
+      func.apply(context, args);
+    }
+  };
+};
 
-        $('.popup-btn-close').click(function(e){
-          $('.popup').hide();
-        });
+var Pab = (function (window, document, debounce) {
+  
+  // Terminology used:
+  // toggle - The dynamically added button used to toggle the hidden content
+  // target - The object which contains the hidden content
+  // toggleParent - The object which will, or does, contain the toggle button
 
-        $('.popup').click(function(e){
-          e.stopPropagation();
-        });
-});
+  "use strict";
+
+  var dataAttr = "data-pab";
+  var attrName = dataAttr.replace("data-", "") + "_";
+  var btnClass = dataAttr.replace("data-", "") + "-btn";
+  var dataExpandAttr = dataAttr + "-expand";
+  var internalId = 0;
+
+
+  function $ (selector) {
+    return Array.prototype.slice.call(document.querySelectorAll(selector));
+  }
+
+
+  function _isExpanded (obj) { // or not aria-hidden
+    return obj && (obj.getAttribute("aria-expanded") === "true" || obj.getAttribute("aria-hidden") === "false");
+  }
+
+
+  // This function is globally reusable. Perhaps externalise for reuse?
+  var _getHiddenObjectHeight = function (obj) {
+    var clone = obj.cloneNode(true);
+    var height = 0;
+    clone.id = obj.id + "_clone";
+    clone.setAttribute("style",
+                       "display:block;" +
+                       "width:" + obj.offsetWidth + "px;" +
+                       "position:absolute;" +
+                       "top:0;" +
+                       "left:-999rem;" +
+                       "max-height:none;" +
+                       "height:auto;" +
+                       "visibility:visible;"
+                      );
+
+    // Append as next sibling - FAQ requirement.
+    obj.parentNode.insertBefore(clone, obj.nextSibling);
+
+    height = clone.clientHeight; // faster than getBoundingClientRect
+    obj.parentElement.removeChild(clone);
+    return height;
+  };
+
+
+  var _setToggleSvgTitle = function(toggle) {
+    var title = toggle.getElementsByTagName("title");
+    if (title && title[0]) {
+      title[0].innerHTML = _isExpanded(toggle) ? "Hide" : "Show";
+    }
+  };
+
+
+  var _openCloseToggleTarget = function (toggle, target, isExpanded) {
+    toggle.setAttribute("aria-expanded", !isExpanded);
+    _setToggleMaxHeight(target);
+    window.requestAnimationFrame(function(){
+      target.setAttribute("aria-hidden", isExpanded);
+    });
+    _setToggleSvgTitle(toggle);
+  };
+
+  var _setToggleMaxHeight = function (target) {
+    if (_isExpanded(target)) {
+      // max-height overidden by CSS !important
+      // target.style.maxHeight = 0;
+    } else {
+      target.style.maxHeight = _getHiddenObjectHeight(target) + "px";
+    }
+  };
+
+  var _toggleClicked = function (event) {
+
+    var toggle = event.target;
+    var target;
+    var isExpanded;
+
+    if (toggle) {
+
+      // To prevent children bubbling up to parent causing more than one click event
+      event.stopPropagation();
+
+      target = document.getElementById(toggle.getAttribute("aria-controls"));
+      if (target) {
+        isExpanded = _isExpanded(toggle);
+        _openCloseToggleTarget(toggle, target, isExpanded);
+      }
+    }
+  };
+
+
+  var _addToggleListeners = function (toggle) {
+    // Simpler to mangage here rather than in a global handler (consider hover and blur)
+
+    // Parent of toggle and target - Deprecated to support IE 9
+    //toggle.addEventListener("focus", _toggleParentClass, false);
+    //toggle.addEventListener("blur", _toggleParentClass, false);
+    //toggle.addEventListener("mouseout", _toggleParentClass, false);
+    //toggle.addEventListener("mouseover", _toggleParentClass, false);
+
+    toggle.addEventListener("click", _toggleClicked, false);
+
+  };
+
+
+  var _setUpToggle = function (toggle) {
+
+    // Create a html button, add content from parent, replace original parent content.
+    var btn = document.createElement("button");
+    
+    btn.className = btnClass;
+    btn.innerHTML = toggle.innerHTML;
+    btn.setAttribute("aria-expanded", false);
+    btn.setAttribute("id", attrName + internalId++);
+    btn.setAttribute("aria-controls", toggle.getAttribute(dataAttr));
+
+    toggle.innerHTML = "";
+    toggle.appendChild(btn);
+    
+    return btn;
+  };
+
+
+  // Prestating the container class in the HTML allows the CSS to render before JS kicks in.
+  // Add container class to parent if not prestated
+  var _setUpToggleParent = function (toggle) {
+    var parent = toggle.parentElement;
+    if (parent && !parent.className.match(attrName + "container")) {
+      //parent.classList.add(attrName + "container");
+      parent.className += " " + attrName + "container";
+    }
+  };
+
+
+  var _addToggleSVG = function (toggle) {
+    var clone = toggle.cloneNode(true);
+    if (!clone.innerHTML.match("svg")) {
+
+      // HTML SVG definition allows more control
+      clone.innerHTML += "<svg role=presentational class=" + dataAttr.replace("data-", "") + "-svg-plus><title>Show</title><use class=\"use-plus\" xlink:href=\"#icon-vert\" /><use xlink:href=\"#icon-hori\"/></svg>";
+      //requestAnimationFrame(function () {
+        toggle.parentElement.replaceChild(clone, toggle);
+      //});
+    }
+    return clone;
+  };
+
+
+  var _setUpTargetAria = function (toggle, target) {
+    target.setAttribute("aria-hidden", !_isExpanded(toggle));
+    target.setAttribute("aria-labelledby", toggle.id);
+  };
+
+
+  var _resetAllTargetsMaxHeight = function () {
+    var toggles = document.querySelectorAll("[" + dataAttr + "]");
+    var i = toggles.length;
+    var target;
+    while (i--) {
+      target = document.getElementById(toggles[i].getAttribute(dataAttr));
+      if (target) {
+        target.style.maxHeight = _getHiddenObjectHeight(target) + "px";
+      }
+    }
+  };
+
+
+  var isMustardCut = function () {
+    return (document.querySelectorAll && document.addEventListener);
+  };
+
+
+  var _openIfRequired = function (toggle, target) {
+    
+    var fragmentId = window.location.hash.replace("#", "");
+    
+    // Expand by default "data-pab-expand" small delay applied
+    if (toggle.parentElement.hasAttribute(dataExpandAttr)) {
+      setTimeout(function () {
+        _openCloseToggleTarget(toggle, target, _isExpanded(toggle));
+      }, 500);
+    }
+    
+
+    // Check url fragment and if target ID matches, open it
+    if (target.id === fragmentId) {
+      setTimeout(function () {
+        _openCloseToggleTarget(toggle, target, false);
+        toggle.focus();
+      }, 1000);
+    }
+
+  };
+
+
+  var addSingleToggleTarget = function (toggleParent) {
+
+    var targetId = toggleParent.getAttribute(dataAttr);
+    var target = document.getElementById(targetId);
+    var toggle;
+
+    if (target && isMustardCut) {
+      toggle = _setUpToggle(toggleParent);
+      _setUpToggleParent(toggleParent);
+      toggle = _addToggleSVG(toggle);
+      _setUpTargetAria(toggle, target);
+      _addToggleListeners(toggle);
+      _openIfRequired(toggle, target);
+    }
+  };
+
+
+  var addToggles = function () {
+
+    // Iterate over all toggles (elements with the "data-pab" attribute)
+    var togglesMap = $("[" + dataAttr + "]").reduce(function (temp, toggleParent) {
+      addSingleToggleTarget(toggleParent);
+      return true;
+    }, {});
+
+    return true;
+  };
+
+
+  if (isMustardCut) {
+    window.addEventListener("load", addToggles, false);
+
+    // Recalculate all target max-heights after (debounced) window is resized.
+    window.addEventListener("resize", debounce(_resetAllTargetsMaxHeight, 500), false);
+  }
+
+
+  return {
+    // Exposes an addition function to the global scope allowing toggle & target to be added dynamically.
+    add: addSingleToggleTarget
+  };
+
+
+}(window, document, debounce));
+
+// To add dynamically created toggles:
+// Pab.add(toggle-object); // Add individual toggle & target
+

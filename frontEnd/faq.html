@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="utf-8" http-equiv="encoding">
+        <link href="/src/css/style.css" rel="stylesheet">
+        <title>FAQ Page</title>
+    </head>
+    <body>
+        <h1>FAQ</h1>
+        <h2>Questions You May Have</h2>
+        <dl class="dl-faq pab_container">
+            <dt data-pab="faq_1"><span>How does it work?</span></dt>
+            <dd id="faq_1">
+                <div>
+                    <p></p> 
+                    <p>The capturing device (hopefully a Raspberry Pi) will run on a specific wireless network on campus. It will capture ‘Every’ packet on that interface from all the users connected to it, will scrape basic information from every packet(destination, time, size of packet, etc), analyze them, and store them on a JSON file. <p></p>The JSON file will be sent to the server hosting the website, where the data will be displayed in multiple ways. The update time interval is 10 seconds at the moment.</p>
+                </div>
+            </dd>
+            <!-- data-pab-expand for default expand-->
+            <dt data-pab="faq_2"><span>Is my privacy being invaded?</span></dt>
+            <dd id="faq_2">
+                <div>
+                    <p></p>
+                    <p>No. Although we might see packets coming from your device, these packets are encrypted. We see the header of the packet, which contains metadata such as source, destination, browser version, timestamps, etc. We also don’t keep track of IP addresses.</p>
+                </div>
+            </dd>
+            <dt data-pab="faq_3"><span>Is this capturing ALL the traffic at hunter college?</span></dt>
+            <dd id="faq_3">
+                <span></span>
+                <div>
+                    <p></p>
+                    <p><span>No. The script will only capture the traffic flowing through the repeater where our capturing device is connected. If multiple repeaters belong to the same subnet (which is the case on many places in the library), then our capturing range increases to multiple repeaters. But it is mostly based on physical location.<p></p> Also, the fact that you might be next to the capturing device does not guarantee that you are connected to the same repeater. If you came from direction A, and I came from direction B, and we meet at C, I might connect to C, but your device might remain connected to A, or vice versa.
+                    </span></p>
+                    <span></span>
+                </div>
+            </dd>
+            <dt data-pab="faq_4"><span><span>Will this capture all the websites i, or any other user goes to ?</span></span></dt>
+            <dd id="faq_4">
+                <div>
+                    <p></p>
+                    <p>Yes, and No. Some websites are hosted in an environment that might return a different hostname than what the GET request is when you attempt to access it.<p> For instance, if you are hosting a website on AWS (Amazon Web Services), and your website is called ‘xyz.com’, our capturing script might see this request as an AWS request, making xyz.com pretty much invisible in our data. Our other graphing tool should be able to capture every single website you type in your browser though, as it is capturing DNS queries (GET requests).</p>
+                    </p>
+                </div>
+            </dd>
+            <dt data-pab="faq_5"><span><span>Can this script be used at another location?</span></span></dt>
+            <dd id="faq_5">
+                <div>
+                    <p>
+                       <p></p>
+                        No. If the network is open, open in the sense that it only requires you to agree to some terms (Starbucks), or enter a username and password on a web portal AFTER BEING ALREADY CONNECTED TO THE NETWORK (Hunter Campus), then it will work. 
+                        <p></p>If the network is password protected, whether WEP, WPA, WPA2, 802.1x, etc, then it will not work. There are ways to set it up so that you can decrypt packets on these specific protocols as they come in, but it is not needed at Hunter College.
+                    </p>
+                </div>
+            </dd>
+        </dl>
+        <svg style="display:none">
+            <defs>
+                <symbol aria-labelledby="title" id="icon-plus" role="img" viewbox="0 0 38 38">
+                    <title>Show</title>
+                    <path class="icon-plus-v" d="M10.5 19l17 0"></path>
+                    <path class="icon-plus-h" d="M19 10.5l0 17"></path>
+                </symbol>
+                <symbol aria-labelledby="title" id="icon-minus" role="img" viewbox="0 0 38 38">
+                    <title>Hide</title>
+                    <path class="icon-plus-v" d="M10.5 19l17 0"></path>
+                </symbol>
+                <!-- vert and hori combined make up the plus icon and allow for animation -->
+                <symbol id="icon-vert" role="presentational" viewbox="0 0 38 38">
+                    <path d="M19 10.5l0 17"></path>
+                </symbol>
+                <symbol id="icon-hori" role="presentational" viewbox="0 0 38 38">
+                    <path d="M10.5 19l17 0"></path>
+                </symbol>
+            </defs>
+        </svg>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="/src/js/code.js" type="text/javascript"></script>
+    </body>
+</html>

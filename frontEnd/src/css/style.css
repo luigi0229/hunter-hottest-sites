@@ -1,44 +1,48 @@
-
-a,
-a:focus,
-a:hover {
+a, a:focus, a:hover {
   color: #fff;
 }
 
-h3{
+h3 {
   font-size: 20px;
 }
 
-html,
-body {
+html, body {
   height: 700px;
   background-color: #333;
 }
+
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
 }
 
 .cover-container {
   margin-right: auto;
   margin-left: auto;
 }
+
+
 /* Padding for spacing */
+
 .inner {
   padding: 30px;
 }
 
+
 /*Bubble Graph*/
+
 .node {
   stroke-width: 1.5px;
 }
+
 .node:hover circle {
   fill: grey !important;
 }
 
 text {
-  font: 18px 'Open Sans', sans-serif;;
+  font: 18px 'Open Sans', sans-serif;
+  ;
   text-anchor: middle;
   pointer-events: none;
   fill: white;
@@ -47,41 +51,83 @@ text {
 
 circle {
   fill: #d83000;
-  stroke: white ;
+  stroke: white;
   stroke-width: 2px;
 }
+
+
 /*Buttons*/
 
-.btnUser{
-    position:absolute;
-    left: 15%;
-    top: 15%;
-    cursor:pointer;
+#btnUser {
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  right: 0px;
+  z-index: 1;
 }
-.btnTraffic{
-    position:absolute;
-    left: 20%;
-    top: 15%;
-    cursor:pointer;
 
+#btnUser:hover {
+  border-radius: 50px;
+  background-color: white;
+  color: #434343;
 }
 
-.btnPacket{
+#btnTraffic {
+  position: absolute;
+  left: 20%;
+  top: 15%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  right: 0px;
+  z-index: 1;
+}
+
+#btnTraffic:hover {
+  border-radius: 50px;
+  background-color: white;
+  color: #434343;
+}
+
+#btnPacket {
   position: absolute;
   left: 25%;
   top: 15%;
-  cursor:pointer;
-
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  right: 0px;
+  z-index: 1;
 }
+
+#btnPacket:hover {
+  border-radius: 50px;
+  background-color: white;
+  color: #434343;
+}
+
+
 /*Mouseover Display*/
-.tooltip{
+
+.tooltip {
   top: 30%;
   right: 0;
   line-height: 10px;
   font-size: 10px;
 }
 
+
 /*About Me dialog*/
+
 .popup {
   display: none;
   position: absolute;
@@ -90,24 +136,24 @@ circle {
   width: 500px;
   margin-left: -350px;
   padding: 20px 30px;
-
   background: #fff;
   color: #333;
   font-size: 15px;
   line-height: 20px;
-  text-align:left;
+  text-align: left;
   border: 10px solid #150E2D;
   z-index: 9999;
   text-shadow: none;
-
 }
+
 .popup-mobile {
   position: absolute;
   top: 0;
   left: 0;
   margin: 30px 0 0;
   width: 100%;
-}     
+}
+
 .popup-btn-close {
   position: absolute;
   top: 8px;
@@ -117,32 +163,38 @@ circle {
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-} 
+}
+
+
 /*
  * Header
  */
+
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.masthead-nav > li {
+.masthead-nav> li {
   display: inline-block;
 }
-.masthead-nav > li + li {
+
+.masthead-nav> li+ li {
   margin-left: 10px;
 }
-.masthead-nav > li > a {
+
+.masthead-nav> li> a {
   padding-right: 0;
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
+  color: #fff;
+  /* IE8 proofing */
+  color: rgba(255, 255, 255, .75);
   border-bottom: 2px solid transparent;
 }
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
+
+.masthead-nav> li> a:hover, .masthead-nav> li> a:focus {
   background-color: transparent;
   border-bottom-color: #fff;
 }
@@ -156,6 +208,7 @@ circle {
   }
 }
 
+
 /*
  * Cover
  */
@@ -163,21 +216,26 @@ circle {
 .cover {
   padding: 0 20px;
 }
+
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
 }
 
 .mastfoot {
-    position: absolute;
-    bottom: 0;
-  }
+  position: absolute;
+  bottom: 0;
+}
+
+
 /*
  * Footer
  */
+
 .mastfoot {
-  color: #999; /* IE8 proofing */
-  color: rgba(255,255,255,.5);
+  color: #999;
+  /* IE8 proofing */
+  color: rgba(255, 255, 255, .5);
 }
 
 
@@ -200,26 +258,189 @@ circle {
     vertical-align: middle;
   }
   /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; 
+  .masthead, .mastfoot, .cover-container {
+    width: 100%;
   }
 }
 
 @media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
+  .masthead, .mastfoot, .cover-container {
     width: 1000px;
   }
-  h3{
-    font-size:35px;
+  h3 {
+    font-size: 35px;
   }
-.tooltip{
-  top: 30%;
-  right: 5%;
-  line-height: 20px;
-  font-size: 15px;
+  .tooltip {
+    top: 30%;
+    right: 5%;
+    line-height: 20px;
+    font-size: 15px;
+  }
 }
+
+
+/*FAQ Page*/
+
+body {
+  padding: 0;
+  font-weight: 100;
+}
+
+
+/* FAQ container */
+
+.dl-faq {
+  position: relative;
+  max-width: 36rem;
+  margin: 2rem auto 3rem;
+}
+
+.dl-faq> dt {
+  font-size: 1.2rem;
+  font-weight: 100;
+  padding: 1rem;
+  /* Fix for IE9 & 10 */
+  border-top: 1px solid rgba(255, 255, 255, .2);
+}
+
+dt> button {
+  color: inherit;
+  background-color: inherit;
+}
+
+.dl-faq> dt:first-child .pab-btn, .dl-faq> dt:first-child {
+  border-top: 0;
+}
+
+.dl-faq.pab_container> dt {
+  /* added via JS */
+  padding: 0;
+}
+
+.dl-faq> dd {
+  max-width: 34rem;
+  margin: 0 auto;
+  font-weight: 100;
+  text-align: left;
+}
+
+.dl-faq> dd> div {
+  padding: 0 0 2rem;
+}
+
+.dl-faq div> p {
+  margin: 0 0 1rem;
+}
+
+.dl-faq div>:last-child {
+  margin: 0;
+}
+
+
+/* The acivating buttons added via JS */
+
+.pab-btn {
+  position: relative;
+  cursor: pointer;
+  transition: color .3s ease-in;
+  /* Using absolute positioning for SVG so reserve some space */
+  padding: 1rem 2.5rem 1rem .5rem;
+  border: 0 solid transparent;
+  border-top: 1px solid rgba(0, 0, 0, .75);
+  /* inherit doesn't work in IE */
+  font-size: inherit;
+  text-align: left;
+  width: 100%;
+}
+
+.pab-btn:hover, .pab-btn:focus, .pab-btn:active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, .25);
+}
+
+.pab-btn:focus {
+  outline: 0 solid;
+}
+
+.pab-btn::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
+.pab-btn> span {
+  position: relative;
+  /* Removes button drepression in IE */
+  pointer-events: none;
+  /* Required by Safari */
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s;
+}
+
+.pab-btn:hover> span, .pab-btn:focus> span {
+  border-bottom-color: rgba(255, 255, 255, .5);
+}
+
+.pab-btn:active> span {
+  border-bottom-color: transparent;
+}
+
+.pab-svg-plus {
+  /* Tesco requirement
+  border: 2px solid currentColor; */
+  border-radius: 100%;
+  display: block;
+  position: absolute;
+  top: calc(50% - .75em);
+  right: 4px;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
+  pointer-events: none;
+  stroke-width: 4;
+  stroke-linecap: square;
+  stroke: currentColor;
+  -webkit-transition: transform .7s ease-out, box-shadow .3s ease-out;
+  transition: transform .7s ease-out, box-shadow .3s ease-out;
+}
+
+[aria-expanded="true"]> .pab-svg-plus {
+  transform: rotateZ(360deg);
+}
+
+.use-plus {
+  /* used to animate plus into minus */
+  -webkit-transition: stroke .5s ease-out, opacity .7s ease-out;
+  transition: stroke .5s ease-out, opacity .7s ease-out;
+}
+
+[aria-expanded=true] .use-plus {
+  opacity: 0;
+}
+
+.isSafari .pab-btn .pab-svg-plus {
+  box-shadow: none;
+}
+
+[data-pab]+ [aria-hidden] {
+  overflow: hidden;
+  opacity: 1;
+  max-height: 50rem;
+  visibility: visible;
+  transition: visibility 0s ease 0s, max-height .65s ease-out 0s, opacity .65s ease-in 0s;
+}
+
+[data-pab]+ [aria-hidden="true"] {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: .66s, 0s, 0s;
+}
+
+
+/* Overide the max-height set as an inline style by the JS */
+
+[data-pab]+ [style][aria-hidden="true"] {
+  max-height: 0 !important;
 }

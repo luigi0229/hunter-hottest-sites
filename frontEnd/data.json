@@ -1,20 +1,26 @@
 [{  
    "color":"green",
    "name":"Slickdeals.net",
-   "r":10,
+   "rt":100,
+   "ru":50,
+   "rp":50,
    "packets": 1000,
    "size": "123KB",
    "users": 43,
+   "ServerIP": "65.52.108.203",
    "firstSeen": "12:30 AM",
    "lastSeen": "12:33 AM"
 },
 {  
    "color":"red",
    "name":"Cloudfront.net",
-   "r":50,
+   "rt":100,
+   "ru":10,
+   "rp":50,
    "packets": 1002,
    "size": "133KB",
    "users": 45,
+   "ServerIP": "65.52.108.203",
    "firstSeen": "12:30 AM",
    "lastSeen": "12:33 AM"
 }]
