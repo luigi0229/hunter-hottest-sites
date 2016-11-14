@@ -25,8 +25,9 @@ var nodesByName = {};
 var svg = d3.select("#graph")
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "0 0 1200 800")
-  .classed("svg-content", true);
+  .attr("viewBox", "-120 -120 1500 750")
+  .classed("svg-content", true) 
+  .classed("svg-content-responsive", true);
 
 // display descriptions
 var tooltip = d3.select("body")
@@ -155,7 +156,7 @@ function redraw(newData,check){
    svg = d3.select("#graph")
     .append("svg")
     .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", "0 0 1200 800")
+    .attr("viewBox", "-120 -120 1500 800")
     .classed("svg-content", true);
 
   var redrawNodes = [];
@@ -317,6 +318,8 @@ function resize() {
 }
 
 d3.select(window).on('resize', resize);
+
+
 // FAQ page
 var debounce = function(func, wait, immediate) {
 
@@ -342,12 +345,6 @@ var debounce = function(func, wait, immediate) {
 };
 
 var Pab = (function (window, document, debounce) {
-  
-  // Terminology used:
-  // toggle - The dynamically added button used to toggle the hidden content
-  // target - The object which contains the hidden content
-  // toggleParent - The object which will, or does, contain the toggle button
-
   "use strict";
 
   var dataAttr = "data-pab";
@@ -362,12 +359,11 @@ var Pab = (function (window, document, debounce) {
   }
 
 
-  function _isExpanded (obj) { // or not aria-hidden
+  function _isExpanded (obj) { 
     return obj && (obj.getAttribute("aria-expanded") === "true" || obj.getAttribute("aria-hidden") === "false");
   }
 
 
-  // This function is globally reusable. Perhaps externalise for reuse?
   var _getHiddenObjectHeight = function (obj) {
     var clone = obj.cloneNode(true);
     var height = 0;
@@ -439,22 +435,12 @@ var Pab = (function (window, document, debounce) {
 
 
   var _addToggleListeners = function (toggle) {
-    // Simpler to mangage here rather than in a global handler (consider hover and blur)
-
-    // Parent of toggle and target - Deprecated to support IE 9
-    //toggle.addEventListener("focus", _toggleParentClass, false);
-    //toggle.addEventListener("blur", _toggleParentClass, false);
-    //toggle.addEventListener("mouseout", _toggleParentClass, false);
-    //toggle.addEventListener("mouseover", _toggleParentClass, false);
-
     toggle.addEventListener("click", _toggleClicked, false);
 
   };
 
 
   var _setUpToggle = function (toggle) {
-
-    // Create a html button, add content from parent, replace original parent content.
     var btn = document.createElement("button");
     
     btn.className = btnClass;
@@ -469,13 +455,9 @@ var Pab = (function (window, document, debounce) {
     return btn;
   };
 
-
-  // Prestating the container class in the HTML allows the CSS to render before JS kicks in.
-  // Add container class to parent if not prestated
   var _setUpToggleParent = function (toggle) {
     var parent = toggle.parentElement;
     if (parent && !parent.className.match(attrName + "container")) {
-      //parent.classList.add(attrName + "container");
       parent.className += " " + attrName + "container";
     }
   };
@@ -487,9 +469,7 @@ var Pab = (function (window, document, debounce) {
 
       // HTML SVG definition allows more control
       clone.innerHTML += "<svg role=presentational class=" + dataAttr.replace("data-", "") + "-svg-plus><title>Show</title><use class=\"use-plus\" xlink:href=\"#icon-vert\" /><use xlink:href=\"#icon-hori\"/></svg>";
-      //requestAnimationFrame(function () {
         toggle.parentElement.replaceChild(clone, toggle);
-      //});
     }
     return clone;
   };
@@ -586,7 +566,3 @@ var Pab = (function (window, document, debounce) {
 
 
 }(window, document, debounce));
-
-// To add dynamically created toggles:
-// Pab.add(toggle-object); // Add individual toggle & target
-

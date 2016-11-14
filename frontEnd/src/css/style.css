@@ -55,8 +55,278 @@ circle {
   stroke-width: 2px;
 }
 
-
+#graph{
+  margin-left:20%;
+  margin-top: -5%;
+}
 /*Buttons*/
+#btnUser {
+  position: absolute;
+  left: 15%;
+  top: 49%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  right: 0px;
+  z-index: 1;
+  max-width: 50px;
+}
+
+#btnUser:hover {
+  border-radius: 50px;
+  background-color: white;
+  color: #434343;
+}
+
+#btnTraffic {
+  position: absolute;
+  left: 43%;
+  top: 49%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  right: 0px;
+  z-index: 1;
+  max-width: 50px;
+}
+
+#btnTraffic:hover {
+  border-radius: 50px;
+  background-color: white;
+  color: #434343;
+}
+
+#btnPacket {
+  position: absolute;
+  left: 70%;
+  top: 49%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  right: 0px;
+  max-width: 60px;
+  z-index: 1;
+}
+
+#btnPacket:hover {
+  border-radius: 50px;
+  background-color: white;
+  color: #434343;
+}
+
+
+/*Mouseover Display*/
+
+.tooltip {
+  top: 30%;
+  right: 0;
+  line-height: 10px;
+  font-size: 10px;
+}
+
+/*
+ * Header
+ */
+
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav> li {
+  display: inline-block;
+  margin-left: -15%;
+}
+
+.masthead-nav> li+ li {
+  margin-left: 10px;
+}
+
+.masthead-nav> li> a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  /* IE8 proofing */
+  color: rgba(255, 255, 255, .75);
+  border-bottom: 2px solid transparent;
+}
+
+.masthead-nav> li> a:hover, .masthead-nav> li> a:focus {
+  background-color: transparent;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+
+#graph{
+  margin-top:25%;
+}
+
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.mastfoot {
+  position: fixed;
+  bottom: 0;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999;
+  color: rgba(255, 255, 255, .5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+
+/*Button scale x2*/
+@media (min-width: 500px){
+#btnUser {
+  position: relative;
+  left: 25%;
+  top: 10%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  right: 0px;
+  z-index: 1;
+}
+
+#graph{
+  margin-top:18%;
+  margin-left: 10%;
+}
+
+.masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: absolute;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead, .mastfoot, .cover-container {
+    width: 100%;
+  }
+#btnUser {
+  position: absolute;
+  left: 25%;
+  top: 15%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  right: 0px;
+  z-index: 1;
+}
+
+#btnUser:hover {
+  border-radius: 50px;
+  background-color: white;
+  color: #434343;
+}
+#btnTraffic {
+  position: absolute;
+  left: 43%;
+  top: 15%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  right: 0px;
+  z-index: 1;
+}
+
+#btnTraffic:hover {
+  border-radius: 50px;
+  background-color: white;
+  color: #434343;
+}
+
+#btnPacket {
+  position: absolute;
+  left: 60%;
+  top: 15%;
+  cursor: pointer;
+  background-color: transparent;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  right: 0px;
+  z-index: 1;
+}
+
+#btnPacket:hover {
+  border-radius: 50px;
+  background-color: white;
+  color: #434343;
+}
+
+}
+
+@media (min-width: 992px) {
+  .masthead, .mastfoot, .cover-container {
+    width: 1000px;
+      z-index: 1; 
+
+  }
+  h3 {
+    font-size: 35px;
+  }
+  .tooltip {
+    top: 30%;
+    right: 5%;
+    line-height: 20px;
+    font-size: 15px;
+  }
+
+#graph{
+  margin:0;
+  position: relative;
+}
 
 #btnUser {
   position: absolute;
@@ -98,7 +368,7 @@ circle {
 
 #btnPacket {
   position: absolute;
-  left: 25%;
+  left: 26%;
   top: 15%;
   cursor: pointer;
   background-color: transparent;
@@ -114,169 +384,8 @@ circle {
   background-color: white;
   color: #434343;
 }
-
-
-/*Mouseover Display*/
-
-.tooltip {
-  top: 30%;
-  right: 0;
-  line-height: 10px;
-  font-size: 10px;
 }
 
-
-/*About Me dialog*/
-
-.popup {
-  display: none;
-  position: absolute;
-  top: 50px;
-  left: 55%;
-  width: 500px;
-  margin-left: -350px;
-  padding: 20px 30px;
-  background: #fff;
-  color: #333;
-  font-size: 15px;
-  line-height: 20px;
-  text-align: left;
-  border: 10px solid #150E2D;
-  z-index: 9999;
-  text-shadow: none;
-}
-
-.popup-mobile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 30px 0 0;
-  width: 100%;
-}
-
-.popup-btn-close {
-  position: absolute;
-  top: 8px;
-  right: 14px;
-  color: #333;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-
-/*
- * Header
- */
-
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.masthead-nav> li {
-  display: inline-block;
-}
-
-.masthead-nav> li+ li {
-  margin-left: 10px;
-}
-
-.masthead-nav> li> a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  /* IE8 proofing */
-  color: rgba(255, 255, 255, .75);
-  border-bottom: 2px solid transparent;
-}
-
-.masthead-nav> li> a:hover, .masthead-nav> li> a:focus {
-  background-color: transparent;
-  border-bottom-color: #fff;
-}
-
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
-}
-
-
-/*
- * Cover
- */
-
-.cover {
-  padding: 0 20px;
-}
-
-.cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
-}
-
-.mastfoot {
-  position: absolute;
-  bottom: 0;
-}
-
-
-/*
- * Footer
- */
-
-.mastfoot {
-  color: #999;
-  /* IE8 proofing */
-  color: rgba(255, 255, 255, .5);
-}
-
-
-/*
- * Affix and center
- */
-
-@media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: absolute;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead, .mastfoot, .cover-container {
-    width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-  .masthead, .mastfoot, .cover-container {
-    width: 1000px;
-  }
-  h3 {
-    font-size: 35px;
-  }
-  .tooltip {
-    top: 30%;
-    right: 5%;
-    line-height: 20px;
-    font-size: 15px;
-  }
-}
 
 
 /*FAQ Page*/
