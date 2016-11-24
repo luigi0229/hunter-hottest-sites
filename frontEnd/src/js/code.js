@@ -18,14 +18,14 @@ var width = window.innerWidth,
 var color = d3.scale.category20();
 
 var nodes = [], labels = [],
-    foci = [{x: 550, y: 350}];
+    foci = [{x: 550, y: 450}];
 
 var nodesByName = {};
 
 var svg = d3.select("#graph")
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "-120 -120 1500 750")
+  .attr("viewBox", "0 0 1300 800")
   .classed("svg-content", true) 
   .classed("svg-content-responsive", true);
 
@@ -37,20 +37,20 @@ var tooltip = d3.select("body")
   .style("visibility", "hidden");
 
   // Button for traffic graph
-  d3.select("#graph").append("button").text("User")
-  .attr("float", "left").attr("id","btnUser")
+  d3.select(".cover-container").append("button").text("User")
+  .attr("id","btnUser")
   .on("click",function(){
       return redraw(dataSet,"user");
     })
   // User graph
-  d3.select("#graph").append("button").text("Traffic")
-  .attr("float", "left").attr("id","btnTraffic")
+  d3.select(".cover-container").append("button").text("Traffic")
+  .attr("id","btnTraffic")
   .on("click",function(){ 
       return redraw(dataSet,"traffic");
     })
     // Packets graph
-  d3.select("#graph").append("button").text("Packets")
-    .attr("float", "left").attr("id","btnPacket")
+  d3.select(".cover-container").append("button").text("Packets")
+    .attr("id","btnPacket")
     .on("click",function(){
         return redraw(dataSet,"packet");
       })
@@ -67,12 +67,9 @@ var force = d3.layout.force()
     .size([width, height])
     .on("tick", tick);
 
-
-
 function tick(e) {
   var k = .1 * e.alpha;
-
-  // Push nodes toward their designated focus.
+  
   nodes.forEach(function(o, i) {
     o.y += (foci[0].y - o.y) * k;
     o.x += (foci[0].x - o.x) * k;
@@ -98,6 +95,11 @@ var timer = setInterval(function(){
   nodes.push(nodeObject);
   force.start();
 
+  for(var k in dataSet) {
+    var o = dataSet[k];
+    console.log(o.name);
+}
+
  node = node.data(nodes);
 
   var n = node.enter().append("g")
@@ -108,7 +110,7 @@ var timer = setInterval(function(){
       //    var sel = d3.select(this);
       //    sel.moveToFront();
       // })
-      .on("mouseover", function(){
+      .on("mousedown", function(){
           var coords = d3.select(this)[0][0];
           var app = tooltip.style("visibility", "visible");
           var coordinates = [0, 0];
@@ -156,7 +158,7 @@ function redraw(newData,check){
    svg = d3.select("#graph")
     .append("svg")
     .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", "-120 -120 1500 800")
+    .attr("viewBox", "0 0 1300 800")
     .classed("svg-content", true);
 
   var redrawNodes = [];
@@ -379,10 +381,9 @@ var Pab = (function (window, document, debounce) {
                        "visibility:visible;"
                       );
 
-    // Append as next sibling - FAQ requirement.
     obj.parentNode.insertBefore(clone, obj.nextSibling);
 
-    height = clone.clientHeight; // faster than getBoundingClientRect
+    height = clone.clientHeight;
     obj.parentElement.removeChild(clone);
     return height;
   };
@@ -467,7 +468,6 @@ var Pab = (function (window, document, debounce) {
     var clone = toggle.cloneNode(true);
     if (!clone.innerHTML.match("svg")) {
 
-      // HTML SVG definition allows more control
       clone.innerHTML += "<svg role=presentational class=" + dataAttr.replace("data-", "") + "-svg-plus><title>Show</title><use class=\"use-plus\" xlink:href=\"#icon-vert\" /><use xlink:href=\"#icon-hori\"/></svg>";
         toggle.parentElement.replaceChild(clone, toggle);
     }
@@ -503,7 +503,6 @@ var Pab = (function (window, document, debounce) {
     
     var fragmentId = window.location.hash.replace("#", "");
     
-    // Expand by default "data-pab-expand" small delay applied
     if (toggle.parentElement.hasAttribute(dataExpandAttr)) {
       setTimeout(function () {
         _openCloseToggleTarget(toggle, target, _isExpanded(toggle));
@@ -541,7 +540,6 @@ var Pab = (function (window, document, debounce) {
 
   var addToggles = function () {
 
-    // Iterate over all toggles (elements with the "data-pab" attribute)
     var togglesMap = $("[" + dataAttr + "]").reduce(function (temp, toggleParent) {
       addSingleToggleTarget(toggleParent);
       return true;
@@ -554,13 +552,11 @@ var Pab = (function (window, document, debounce) {
   if (isMustardCut) {
     window.addEventListener("load", addToggles, false);
 
-    // Recalculate all target max-heights after (debounced) window is resized.
     window.addEventListener("resize", debounce(_resetAllTargetsMaxHeight, 500), false);
   }
 
 
   return {
-    // Exposes an addition function to the global scope allowing toggle & target to be added dynamically.
     add: addSingleToggleTarget
   };
 

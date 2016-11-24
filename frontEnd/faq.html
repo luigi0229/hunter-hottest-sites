@@ -5,13 +5,8 @@
         <link href="/src/css/style.css" rel="stylesheet">
         <title>FAQ Page</title>
     </head>
-  <p style="text-align:left; cursor: pointer; width: 50px; margin-left:20px" onclick="goBack()">Home</p>
-<script>
-function goBack() {
-    window.history.back();
-}
-</script>   
- <body>
+  <a style="cursor: pointer; width: 50px; float: left" href="/">Home</a>  
+ <body style="background-color: #333">
         <h1>FAQ</h1>
         <h2>Questions You May Have</h2>
         <dl class="dl-faq pab_container">
@@ -23,7 +18,6 @@ function goBack() {
                         The capturing device (hopefully a Raspberry Pi) will run on a specific wireless network on campus. It will capture ‘Every’ packet on that interface from all the users connected to it, will scrape basic information from every packet(destination, time, size of packet, etc), analyze them, and store them on a JSON file. <p></p>The JSON file will be sent to the server hosting the website, where the data will be displayed in multiple ways. The update time interval is 10 seconds at the moment.</p>
                 </div>
             </dd>
-            <!-- data-pab-expand for default expand-->
             <dt data-pab="faq_2"><span>Is my privacy being invaded?</span></dt>
             <dd id="faq_2">
                 <div>
@@ -46,7 +40,7 @@ function goBack() {
                 <div>
                     <p>
                         <p></p>
-                        Yes, and No. Some websites are hosted in an environment that might return a different hostname than what the GET request is when you attempt to access it.<p></p>r For instance, if you are hosting a website on AWS (Amazon Web Services), and your website is called ‘xyz.com’, our capturing script might see this request as an AWS request, making xyz.com pretty much invisible in our data. Our other graphing tool should be able to capture every single website you type in your browser though, as it is capturing DNS queries (GET requests).
+                        Yes, and No. Some websites are hosted in an environment that might return a different hostname than what the GET request is when you attempt to access it.<p></p> For instance, if you are hosting a website on AWS (Amazon Web Services), and your website is called ‘xyz.com’, our capturing script might see this request as an AWS request, making xyz.com pretty much invisible in our data. Our other graphing tool should be able to capture every single website you type in your browser though, as it is capturing DNS queries (GET requests).
                     </p>
                 </div>
             </dd>
