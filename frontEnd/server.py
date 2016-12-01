@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import select
 import socket
 import time
@@ -42,7 +41,6 @@ def main():
         if(int(time.time()) % 10 == 0):
             startReceiving()
 
-=======
 import select
 import socket
 import time
@@ -86,5 +84,4 @@ def main():
         if(int(time.time()) % 10 == 0):
             startReceiving()
 
->>>>>>> 0064bdbe7f99a5e782fef9531e58826b740447c3
 main()
