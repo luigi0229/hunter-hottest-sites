@@ -97,7 +97,6 @@ var timer = setInterval(function(){
 
   for(var k in dataSet) {
     var o = dataSet[k];
-    console.log(o.name);
 }
 
  node = node.data(nodes);
@@ -440,7 +439,6 @@ var Pab = (function (window, document, debounce) {
 
   };
 
-
   var _setUpToggle = function (toggle) {
     var btn = document.createElement("button");
     
@@ -562,3 +560,38 @@ var Pab = (function (window, document, debounce) {
 
 
 }(window, document, debounce));
+
+// About Me page
+
+$(document).ready(function() {
+    var textlength = 100;
+    var hidetext = "...";
+    var moretext = "Show More...";
+    var lesstext = "Show Less";
+    
+    $('.read-more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > textlength) {
+            var c = content.substr(0, textlength);
+            var h = content.substr(textlength, content.length - textlength);
+ 
+            var html = c + '<span class="hidetext">' + hidetext+ '</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="show-more-link">' + moretext + '</a></span>';
+ 
+            $(this).html(html);
+        }
+    });
+ 
+    $(".show-more-link").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+});

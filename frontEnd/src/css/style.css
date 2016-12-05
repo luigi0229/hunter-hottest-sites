@@ -1,574 +1,513 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-a, a:focus, a:hover {
-  color: #fff;
+a,
+a:focus,
+a:hover {
+    color: #fff;
 }
-
 h3 {
-  font-size: 20px;
+    font-size: 20px;
 }
-/*video { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
-    background-size: cover;
-    transition: 1s opacity;
-    background-color: #333;
-}*/
-html, body {
-  height: 700px;
-  background-color: #333;
-}
-
+html,
 body {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
-  font-family: 'Montserrat', sans-serif;
-  padding: 0;
-  font-weight: 100;
+    height: 700px;
+    background-color: #333;
 }
-
+body {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    font-weight: 100;
+}
 .cover-container {
-  margin-right: auto;
-  margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
 }
-
 /*Home btn for about and faq*/
-.homeBtn{
-  position: fixed;
-  cursor: pointer;
-  width: 50px;
-  margin-left: -48%;
-}
 
+.homeBtn {
+    position: fixed;
+    cursor: pointer;
+    width: 50px;
+    margin-left: -48%;
+}
 /* Padding for spacing */
 
 .inner {
-  padding: 30px;
+    padding: 30px;
 }
-
 /*Bubble Graph*/
 
 .node {
-  stroke-width: 1.5px;
+    stroke-width: 1.5px;
 }
-
 .node:hover circle {
-  fill: grey !important;
+    fill: grey !important;
 }
-
 text {
-  font: 18px 'Open Sans', sans-serif;
-  text-anchor: middle;
-  pointer-events: none;
-  fill: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font: 18px 'Open Sans', sans-serif;
+    text-anchor: middle;
+    pointer-events: none;
+    fill: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-
 circle {
-  fill: #d83000;
-  stroke: white;
-  stroke-width: 2px;
+    fill: #d83000;
+    stroke: white;
+    stroke-width: 2px;
 }
-
-#graph{
-  margin-left: 10%;
-  width: 100%;
-  height: 350px;
-  margin-top: -2%;
+#graph {
+    margin-left: 10%;
+    width: 100%;
+    height: 350px;
+    margin-top: -2%;
 }
 svg {
-  margin-top: auto;
-  margin-left:20%;
+    margin-top: auto;
+    margin-left: 20%;
 }
 /*Buttons*/
+
 #btnUser {
-  position: absolute;
-  left: 15%;
-  top: 70%;
-  cursor: pointer;
-  background-color: transparent;
-  border: 2px solid #fff;
-  text-align: center;
-  color: #fff;
-  right: 0px;
-  z-index: 1;
-  max-width: 50px;
+    position: absolute;
+    left: 15%;
+    top: 70%;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    text-align: center;
+    color: #fff;
+    right: 0px;
+    z-index: 1;
+    max-width: 50px;
 }
-
 #btnUser:hover {
-  border-radius: 50px;
-  background-color: white;
-  color: #434343;
+    border-radius: 50px;
+    background-color: white;
+    color: #434343;
 }
-
 #btnTraffic {
-  position: absolute;
-  left: 43%;
-  top: 70%;
-  cursor: pointer;
-  background-color: transparent;
-  border: 2px solid #fff;
-  text-align: center;
-  color: #fff;
-  right: 0px;
-  z-index: 1;
-  max-width: 50px;
+    position: absolute;
+    left: 43%;
+    top: 70%;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    text-align: center;
+    color: #fff;
+    right: 0px;
+    z-index: 1;
+    max-width: 60px;
 }
-
 #btnTraffic:hover {
-  border-radius: 50px;
-  background-color: white;
-  color: #434343;
+    border-radius: 50px;
+    background-color: white;
+    color: #434343;
 }
-
 #btnPacket {
-  position: absolute;
-  left: 70%;
-  top: 70%;
-  cursor: pointer;
-  background-color: transparent;
-  border: 2px solid #fff;
-  text-align: center;
-  color: #fff;
-  right: 0px;
-  max-width: 60px;
-  z-index: 1;
+    position: absolute;
+    left: 70%;
+    top: 70%;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    text-align: center;
+    color: #fff;
+    right: 0px;
+    max-width: 60px;
+    z-index: 1;
 }
-
 #btnPacket:hover {
-  border-radius: 50px;
-  background-color: white;
-  color: #434343;
+    border-radius: 50px;
+    background-color: white;
+    color: #434343;
 }
-
-
 /*Mouseover Display*/
 
 .tooltip {
-  font-family: 'Montserrat', sans-serif;
-  top: 30%;
-  right: 0;
-  line-height: 10px;
-  font-size: 7px;
+    font-family: 'Montserrat', sans-serif;
+    top: 30%;
+    right: 0;
+    line-height: 10px;
+    font-size: 7px;
 }
-
 /*
  * Header
  */
 
 .masthead-brand {
-  margin-top: 10px;
-  position: relative;;
-  margin-bottom: 10px;
-}
-
-.masthead-nav> li {
-  display: inline-block;
-  margin-left: -15%;
-}
-
-.masthead-nav> li+ li {
-  margin-left: 10px;
-}
-
-.masthead-nav> li> a {
-  padding-right: 0;
-  padding-left: 0;
-  font-size: 16px;
-  font-weight: bold;
-  color: #fff;
-  /* IE8 proofing */
-  color: rgba(255, 255, 255, .75);
-  border-bottom: 2px solid transparent;
-}
-
-.masthead-nav> li> a:hover, .masthead-nav> li> a:focus {
-  background-color: transparent;
-  border-bottom-color: #fff;
-}
-
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
+    margin-top: 10px;
     position: relative;
-  }
-  .masthead-nav {
-    float: right;
-  }
-
-#graph{
-  margin-top:35%;
+    ;
+    margin-bottom: 10px;
 }
-
+.masthead-nav> li {
+    display: inline-block;
+    margin-left: -15%;
 }
-
-
+.masthead-nav> li+ li {
+    margin-left: 10px;
+}
+.masthead-nav> li> a {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    /* IE8 proofing */
+    
+    color: rgba(255, 255, 255, .75);
+    border-bottom: 2px solid transparent;
+}
+.masthead-nav> li> a:hover,
+.masthead-nav> li> a:focus {
+    background-color: transparent;
+    border-bottom-color: #fff;
+}
+@media (min-width: 768px) {
+    .masthead-brand {
+        float: left;
+        position: relative;
+    }
+    .masthead-nav {
+        float: right;
+    }
+    #graph {
+        margin-top: 35%;
+    }
+}
 /*
  * Cover
  */
 
 .cover {
-  padding: 0 20px;
+    padding: 0 20px;
 }
-
 .cover .btn-lg {
-  padding: 10px 20px;
-  font-weight: bold;
+    padding: 10px 20px;
+    font-weight: bold;
 }
-
-
 /*
  * Footer
  */
 
 .mastfoot {
-  position: relative;
-  bottom: 0;
-  top: 15%;
-  margin:auto;
-  color: #999;
-  color: rgba(255, 255, 255, .5);
+    position: relative;
+    bottom: 0;
+    top: 15%;
+    margin: auto;
+    color: #999;
+    color: rgba(255, 255, 255, .5);
 }
-
-
 /*
  * Affix and center
  */
-
-
 /*Button scale x2*/
-@media (min-width: 500px){
 
-.mastfoot {
-  top: 0;
-}
-#btnUser {
-  position: relative;
-  left: 15%;
-  top: 100%;
-  cursor: pointer;
-  background-color: transparent;
-  border: 2px solid #fff;
-  text-align: center;
-  color: #fff;
-  right: 0px;
-  z-index: 1;
-}
-.tooltip {
-    top: 30%;
-    right: 10%;
-    line-height: 20px;
-    font-size: 15px;
-  }
-
-#graph{
-  margin-top:18%;
-  width: 800px;
-  height: 550px;
-  margin-top: 5%;
-  margin-left: 10%;
-}
-svg{
-  margin-top: auto;
-  margin-left:0;
-}
-.masthead {
-    top: 0;
-  }
-
-  /* Start the vertical centering */
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead, .mastfoot, .cover-container {
-    width: 100%;
-  }
-
-#btnUser {
-  position: absolute;
-  left: 25%;
-  top: 15%;
-  cursor: pointer;
-  background-color: transparent;
-  border: 2px solid #fff;
-  text-align: center;
-  color: #fff;
-  right: 0px;
-  z-index: 1;
-}
-#btnTraffic {
-  position: absolute;
-  left: 43%;
-  top: 15%;
-  cursor: pointer;
-  background-color: transparent;
-  border: 2px solid #fff;
-  text-align: center;
-  color: #fff;
-  right: 0px;
-  z-index: 1;
-}
-
-#btnPacket {
-  position: absolute;
-  left: 60%;
-  top: 15%;
-  cursor: pointer;
-  background-color: transparent;
-  border: 2px solid #fff;
-  text-align: center;
-  color: #fff;
-  right: 0px;
-  z-index: 1;
-}
-
-}
-
-@media (min-width: 992px) {
-    .masthead, .mastfoot, .cover-container {
-      width: 1000px;
-      z-index: 1; 
-    }
-    h3 {
-      font-size: 35px;
+@media (min-width: 500px) {
+    .mastfoot {
+        top: 0;
     }
     .tooltip {
-      top: 30%;
-      right: 15%;
-      line-height: 20px;
-      font-size: 15px;
+        top: 30%;
+        right: 10%;
+        line-height: 20px;
+        font-size: 15px;
     }
-
-  #graph{
-    width: 1000px;
-    height: 550px;
-    margin-left: 15%;
-    margin-top: auto;
-  }
-  svg {
-    margin-top: auto;
-    margin-left:0;
+    #graph {
+        margin-top: 18%;
+        width: 800px;
+        height: 550px;
+        margin-top: 5%;
+        margin-left: 10%;
     }
-  #btnUser {
-    position: absolute;
-    left: 20%;
-    top: 15%;
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #fff;
-    text-align: center;
-    color: #fff;
-    right: 0px;
-    z-index: 1;
-  }
-
-  #btnTraffic {
-    position: absolute;
-    left: 25%;
-    top: 15%;
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #fff;
-    text-align: center;
-    color: #fff;
-    right: 0px;
-    z-index: 1;
-  }
-
-  #btnPacket {
-    position: absolute;
-    left: 30%;
-    top: 15%;
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #fff;
-    text-align: center;
-    color: #fff;
-    right: 0px;
-    z-index: 1;
-  }
+    svg {
+        margin-top: auto;
+        margin-left: 0;
+    }
+    .masthead {
+        top: 0;
+    }
+    /* Start the vertical centering */
+    
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+    /* Handle the widths */
+    
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        width: 100%;
+    }
+    #btnUser {
+        position: absolute;
+        left: 25%;
+        top: 16%;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid #fff;
+        text-align: center;
+        color: #fff;
+        right: 0px;
+        z-index: 1;
+    }
+    #btnTraffic {
+        position: absolute;
+        left: 43%;
+        top: 16%;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid #fff;
+        text-align: center;
+        color: #fff;
+        right: 0px;
+        z-index: 1;
+    }
+    #btnPacket {
+        position: absolute;
+        left: 60%;
+        top: 16%;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid #fff;
+        text-align: center;
+        color: #fff;
+        right: 0px;
+        z-index: 1;
+    }
 }
-
-
-/*about page*/
-.about{
-  margin: auto;
+@media (min-width: 992px) {
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        width: 1000px;
+        z-index: 1;
+    }
+    h3 {
+        font-size: 35px;
+    }
+    .tooltip {
+        top: 30%;
+        right: 15%;
+        line-height: 20px;
+        font-size: 15px;
+    }
+    #graph {
+        width: 1000px;
+        height: 550px;
+        margin-left: 15%;
+        margin-top: auto;
+    }
+    svg {
+        margin-top: auto;
+        margin-left: 0;
+    }
+    #btnUser {
+        position: absolute;
+        left: 20%;
+        top: 15%;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid #fff;
+        text-align: center;
+        color: #fff;
+        right: 0px;
+        z-index: 1;
+    }
+    #btnTraffic {
+        position: absolute;
+        left: 25%;
+        top: 15%;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid #fff;
+        text-align: center;
+        color: #fff;
+        right: 0px;
+        z-index: 1;
+    }
+    #btnPacket {
+        position: absolute;
+        left: 30%;
+        top: 15%;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid #fff;
+        text-align: center;
+        color: #fff;
+        right: 0px;
+        z-index: 1;
+    }
 }
-.about h1{
-  margin-right: 10%;
-}
-.about h2{
-  text-align: left;
-  margin-left: 25%;
-}
-.about p{
-  margin-left:25%;
-  margin-right:25%;
-  text-align: left;
-}
-
 /* FAQ container */
+
 .dl-faq {
-  position: relative;
-  max-width: 36rem;
-  margin: 2rem auto 3rem;
+    position: relative;
+    max-width: 36rem;
+    margin: 2rem auto 3rem;
 }
-
 .dl-faq> dt {
-  font-size: 1.2rem;
-  font-weight: 100;
-  padding: 1rem;
-  /* Fix for IE9 & 10 */
-  border-top: 1px solid rgba(255, 255, 255, .2);
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding: 1rem;
+    /* Fix for IE9 & 10 */
+    
+    border-top: 1px solid rgba(255, 255, 255, .2);
 }
-
 dt> button {
-  color: inherit;
-  background-color: inherit;
+    color: inherit;
+    background-color: inherit;
 }
-
-.dl-faq> dt:first-child .pab-btn, .dl-faq> dt:first-child {
-  border-top: 0;
+.dl-faq> dt:first-child .pab-btn,
+.dl-faq> dt:first-child {
+    border-top: 0;
 }
-
 .dl-faq.pab_container> dt {
-  /* added via JS */
-  padding: 0;
+    /* added via JS */
+    
+    padding: 0;
 }
-
 .dl-faq> dd {
-  max-width: 34rem;
-  margin: 0 auto;
-  font-weight: 100;
-  text-align: left;
+    max-width: 34rem;
+    margin: 0 auto;
+    font-weight: 100;
+    text-align: left;
 }
-
 .dl-faq> dd> div {
-  padding: 0 0 2rem;
+    padding: 0 0 2rem;
 }
-
 .dl-faq div> p {
-  margin: 0 0 1rem;
+    margin: 0 0 1rem;
 }
-
 .dl-faq div>:last-child {
-  margin: 0;
+    margin: 0;
 }
-
-
 /* The acivating buttons added via JS */
 
 .pab-btn {
-  position: relative;
-  cursor: pointer;
-  transition: color .3s ease-in;
-  /* Using absolute positioning for SVG so reserve some space */
-  padding: 1rem 2.5rem 1rem .5rem;
-  border: 0 solid transparent;
-  border-top: 1px solid rgba(0, 0, 0, .75);
-  /* inherit doesn't work in IE */
-  font-size: inherit;
-  text-align: left;
-  width: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: color .3s ease-in;
+    /* Using absolute positioning for SVG so reserve some space */
+    
+    padding: 1rem 2.5rem 1rem .5rem;
+    border: 0 solid transparent;
+    border-top: 1px solid rgba(0, 0, 0, .75);
+    /* inherit doesn't work in IE */
+    
+    font-size: inherit;
+    text-align: left;
+    width: 100%;
 }
-
-.pab-btn:hover, .pab-btn:focus, .pab-btn:active {
-  color: #fff;
-  background-color: rgba(0, 0, 0, .25);
+.pab-btn:hover,
+.pab-btn:focus,
+.pab-btn:active {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .25);
 }
-
 .pab-btn:focus {
-  outline: 0 solid;
+    outline: 0 solid;
 }
-
 .pab-btn::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-  margin-top: -2px;
-  margin-bottom: -2px;
+    border: 0;
+    padding: 0;
+    margin-top: -2px;
+    margin-bottom: -2px;
 }
-
 .pab-btn> span {
-  position: relative;
-  /* Removes button drepression in IE */
-  pointer-events: none;
-  /* Required by Safari */
-  border-bottom: 1px solid transparent;
-  transition: border-color .3s;
+    position: relative;
+    pointer-events: none;
+    /* Required by Safari */
+    
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s;
 }
-
-.pab-btn:hover> span, .pab-btn:focus> span {
-  border-bottom-color: rgba(255, 255, 255, .5);
+.pab-btn:hover> span,
+.pab-btn:focus> span {
+    border-bottom-color: rgba(255, 255, 255, .5);
 }
-
 .pab-btn:active> span {
-  border-bottom-color: transparent;
+    border-bottom-color: transparent;
 }
-
 .pab-svg-plus {
-  /* Tesco requirement
-  border: 2px solid currentColor; */
-  border-radius: 100%;
-  display: block;
-  position: absolute;
-  top: calc(50% - .75em);
-  right: 4px;
-  width: 1.5em;
-  height: 1.5em;
-  margin: 0;
-  pointer-events: none;
-  stroke-width: 4;
-  stroke-linecap: square;
-  stroke: currentColor;
-  -webkit-transition: transform .7s ease-out, box-shadow .3s ease-out;
-  transition: transform .7s ease-out, box-shadow .3s ease-out;
+    border-radius: 100%;
+    display: block;
+    position: absolute;
+    top: calc(50% - .75em);
+    right: 4px;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0;
+    pointer-events: none;
+    stroke-width: 4;
+    stroke-linecap: square;
+    stroke: currentColor;
+    -webkit-transition: transform .7s ease-out, box-shadow .3s ease-out;
+    transition: transform .7s ease-out, box-shadow .3s ease-out;
 }
-
 [aria-expanded="true"]> .pab-svg-plus {
-  transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
 }
-
 .use-plus {
-  /* used to animate plus into minus */
-  -webkit-transition: stroke .5s ease-out, opacity .7s ease-out;
-  transition: stroke .5s ease-out, opacity .7s ease-out;
+    /* used to animate plus into minus */
+    
+    -webkit-transition: stroke .5s ease-out, opacity .7s ease-out;
+    transition: stroke .5s ease-out, opacity .7s ease-out;
 }
-
 [aria-expanded=true] .use-plus {
-  opacity: 0;
+    opacity: 0;
 }
-
 .isSafari .pab-btn .pab-svg-plus {
-  box-shadow: none;
+    box-shadow: none;
 }
-
 [data-pab]+ [aria-hidden] {
-  overflow: hidden;
-  opacity: 1;
-  max-height: 50rem;
-  visibility: visible;
-  transition: visibility 0s ease 0s, max-height .65s ease-out 0s, opacity .65s ease-in 0s;
+    overflow: hidden;
+    opacity: 1;
+    max-height: 50rem;
+    visibility: visible;
+    transition: visibility 0s ease 0s, max-height .65s ease-out 0s, opacity .65s ease-in 0s;
 }
-
 [data-pab]+ [aria-hidden="true"] {
-  max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition-delay: .66s, 0s, 0s;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: .66s, 0s, 0s;
 }
-
-
-/* Overide the max-height set as an inline style by the JS */
-
 [data-pab]+ [style][aria-hidden="true"] {
-  max-height: 0 !important;
+    max-height: 0 !important;
+}
+/*about page*/
+
+.about h1:before {
+    position: absolute;
+    margin-left: 28%;
+    margin-right: 28%;
+    top: 10%;
+    right: 0;
+    left: 0;
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-top-color: #505254;
+    content: '';
+    -webkit-mask-image: radial-gradient(circle, #000 10%, transparent);
+}
+.about h2 {
+    text-align: left;
+    margin-left: 25%;
+}
+.about p {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: left;
+}
+.morecontent span {
+    display: none;
+}
+.show-more-link {
+    margin-top: 1%;
+    display: block;
+    font-size: 15px;
+    opacity: 0.9;
 }
