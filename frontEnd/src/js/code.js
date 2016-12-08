@@ -25,7 +25,7 @@ var nodesByName = {};
 var svg = d3.select("#graph")
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "0 0 1300 800")
+  .attr("viewBox", "50 0 1200 1000")
   .classed("svg-content", true) 
   .classed("svg-content-responsive", true);
 
@@ -109,7 +109,7 @@ var timer = setInterval(function(){
       //    var sel = d3.select(this);
       //    sel.moveToFront();
       // })
-      .on("mousedown", function(){
+      .on("mouseover", function(){
           var coords = d3.select(this)[0][0];
           var app = tooltip.style("visibility", "visible");
           var coordinates = [0, 0];
@@ -560,38 +560,3 @@ var Pab = (function (window, document, debounce) {
 
 
 }(window, document, debounce));
-
-// About Me page
-
-$(document).ready(function() {
-    var textlength = 100;
-    var hidetext = "...";
-    var moretext = "Show More...";
-    var lesstext = "Show Less";
-    
-    $('.read-more').each(function() {
-        var content = $(this).html();
- 
-        if(content.length > textlength) {
-            var c = content.substr(0, textlength);
-            var h = content.substr(textlength, content.length - textlength);
- 
-            var html = c + '<span class="hidetext">' + hidetext+ '</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="show-more-link">' + moretext + '</a></span>';
- 
-            $(this).html(html);
-        }
-    });
- 
-    $(".show-more-link").click(function(){
-        if($(this).hasClass("less")) {
-            $(this).removeClass("less");
-            $(this).html(moretext);
-        } else {
-            $(this).addClass("less");
-            $(this).html(lesstext);
-        }
-        $(this).parent().prev().toggle();
-        $(this).prev().toggle();
-        return false;
-    });
-});

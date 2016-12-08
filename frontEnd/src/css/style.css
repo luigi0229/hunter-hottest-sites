@@ -189,26 +189,11 @@ svg {
     font-weight: bold;
 }
 /*
- * Footer
- */
-
-.mastfoot {
-    position: relative;
-    bottom: 0;
-    top: 15%;
-    margin: auto;
-    color: #999;
-    color: rgba(255, 255, 255, .5);
-}
-/*
  * Affix and center
  */
 /*Button scale x2*/
 
 @media (min-width: 500px) {
-    .mastfoot {
-        top: 0;
-    }
     .tooltip {
         top: 30%;
         right: 10%;
@@ -237,7 +222,6 @@ svg {
     /* Handle the widths */
     
     .masthead,
-    .mastfoot,
     .cover-container {
         width: 100%;
     }
@@ -280,7 +264,6 @@ svg {
 }
 @media (min-width: 992px) {
     .masthead,
-    .mastfoot,
     .cover-container {
         width: 1000px;
         z-index: 1;
