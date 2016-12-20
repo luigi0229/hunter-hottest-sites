@@ -4,7 +4,6 @@ d3.json("data.json", function(data) {
   dataSet = data;
 });
 
-// update files
 setInterval(function() {
     d3.json("data.json", function(data) {
     dataSet = data;
@@ -25,7 +24,7 @@ var nodesByName = {};
 var svg = d3.select("#graph")
   .append("svg")
   .attr("preserveAspectRatio", "xMinYMin meet")
-  .attr("viewBox", "50 0 1200 1000")
+  .attr("viewBox", "-50 0 1200 1000")
   .classed("svg-content", true) 
   .classed("svg-content-responsive", true);
 
@@ -37,19 +36,19 @@ var tooltip = d3.select("body")
   .style("visibility", "hidden");
 
   // Button for traffic graph
-  d3.select(".cover-container").append("button").text("User")
+  d3.select(".buttons").append("button").text("User")
   .attr("id","btnUser")
   .on("click",function(){
       return redraw(dataSet,"user");
     })
   // User graph
-  d3.select(".cover-container").append("button").text("Traffic")
+  d3.select(".buttons").append("button").text("Traffic")
   .attr("id","btnTraffic")
   .on("click",function(){ 
       return redraw(dataSet,"traffic");
     })
     // Packets graph
-  d3.select(".cover-container").append("button").text("Packets")
+  d3.select(".buttons").append("button").text("Packets")
     .attr("id","btnPacket")
     .on("click",function(){
         return redraw(dataSet,"packet");
@@ -105,10 +104,6 @@ var timer = setInterval(function(){
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
       .style('cursor', 'pointer')
-      // .on('mousedown', function() {
-      //    var sel = d3.select(this);
-      //    sel.moveToFront();
-      // })
       .on("mouseover", function(){
           var coords = d3.select(this)[0][0];
           var app = tooltip.style("visibility", "visible");
@@ -157,7 +152,7 @@ function redraw(newData,check){
    svg = d3.select("#graph")
     .append("svg")
     .attr("preserveAspectRatio", "xMinYMin meet")
-    .attr("viewBox", "0 0 1300 800")
+    .attr("viewBox", "-50 0 1200 1000")
     .classed("svg-content", true);
 
   var redrawNodes = [];
@@ -232,10 +227,6 @@ function redraw(newData,check){
         .attr("class", "node")
         .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
         .style('cursor', 'pointer')
-        // .on('mousedown', function() {
-        //    var sel = d3.select(this);
-        //    sel.moveToFront();
-        // })
         .on("mouseover", function(){
             var coords = d3.select(this)[0][0];
             var app = tooltip.style("visibility", "visible");
@@ -277,34 +268,6 @@ function redraw(newData,check){
     counter++;
   }, 0);
 }
-//setTimeout(function() { nodes = []; start() }, 3000);
-
-// setTimeout(function() {
-//   var nodeObject = {color: item.color, r: item.r, name: item.name};
-//    nodes.push(nodeObject);
-//   start();
-// }, 1000);
-
-function processUpdates(sites) {
-  for (var i = 0; i < sites.length; i++) {
-    var site = sites[i];
-    if (nodesByName[site.name]) {
-      console.log(site.name, site.r)
-      updateNodeRadius(site.name, site.r)
-    } else {
-      // add new circle to graph
-    }
-  }
-}
-
-function updateNodeRadius(name, radius) {
-  var nodeObject = nodesByName[name];
-  nodeObject[0][0].children[0].r.baseVal.value = radius;
-  force.start();
-}
-
-// setTimeout(function() { updateNodeRadius("Cloudfront.net", 500) }, 3000)
-
 
 d3.selection.prototype.moveToFront = function() {
   return this.each(function(){
@@ -407,8 +370,6 @@ var Pab = (function (window, document, debounce) {
 
   var _setToggleMaxHeight = function (target) {
     if (_isExpanded(target)) {
-      // max-height overidden by CSS !important
-      // target.style.maxHeight = 0;
     } else {
       target.style.maxHeight = _getHiddenObjectHeight(target) + "px";
     }

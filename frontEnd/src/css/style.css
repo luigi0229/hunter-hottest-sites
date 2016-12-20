@@ -58,27 +58,29 @@ circle {
     stroke-width: 2px;
 }
 #graph {
-    margin-left: 10%;
+    margin-left: 15%;
     width: 100%;
-    height: 350px;
+    height: 250px;
     margin-top: -2%;
 }
 svg {
-    margin-top: auto;
-    margin-left: 20%;
+    margin-top: -10%;
+    vertical-align: middle;
 }
 /*Buttons*/
+.buttons{
+    vertical-align: middle;
+    width:100%;
+}
 
 #btnUser {
-    position: absolute;
-    left: 15%;
-    top: 70%;
+    position: relative;
     cursor: pointer;
+    left:-10%;
     background-color: transparent;
     border: 2px solid #fff;
     text-align: center;
     color: #fff;
-    right: 0px;
     z-index: 1;
     max-width: 50px;
 }
@@ -88,15 +90,13 @@ svg {
     color: #434343;
 }
 #btnTraffic {
-    position: absolute;
-    left: 43%;
-    top: 70%;
+    position: relative;
     cursor: pointer;
+    left:0;
     background-color: transparent;
     border: 2px solid #fff;
     text-align: center;
     color: #fff;
-    right: 0px;
     z-index: 1;
     max-width: 60px;
 }
@@ -106,16 +106,14 @@ svg {
     color: #434343;
 }
 #btnPacket {
-    position: absolute;
-    left: 70%;
-    top: 70%;
+    position: relative;
     cursor: pointer;
+    left:10%;
     background-color: transparent;
     border: 2px solid #fff;
     text-align: center;
     color: #fff;
-    right: 0px;
-    max-width: 60px;
+    max-width: 70px;
     z-index: 1;
 }
 #btnPacket:hover {
@@ -127,8 +125,8 @@ svg {
 
 .tooltip {
     font-family: 'Montserrat', sans-serif;
-    top: 30%;
-    right: 0;
+    top: 20%;
+    right:5%;
     line-height: 10px;
     font-size: 7px;
 }
@@ -139,7 +137,6 @@ svg {
 .masthead-brand {
     margin-top: 10px;
     position: relative;
-    ;
     margin-bottom: 10px;
 }
 .masthead-nav> li {
@@ -155,8 +152,6 @@ svg {
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-    /* IE8 proofing */
-    
     color: rgba(255, 255, 255, .75);
     border-bottom: 2px solid transparent;
 }
@@ -165,21 +160,6 @@ svg {
     background-color: transparent;
     border-bottom-color: #fff;
 }
-@media (min-width: 768px) {
-    .masthead-brand {
-        float: left;
-        position: relative;
-    }
-    .masthead-nav {
-        float: right;
-    }
-    #graph {
-        margin-top: 35%;
-    }
-}
-/*
- * Cover
- */
 
 .cover {
     padding: 0 20px;
@@ -188,17 +168,13 @@ svg {
     padding: 10px 20px;
     font-weight: bold;
 }
-/*
- * Affix and center
- */
-/*Button scale x2*/
 
 @media (min-width: 500px) {
     .tooltip {
-        top: 30%;
-        right: 10%;
-        line-height: 20px;
-        font-size: 15px;
+        top: 15%;
+        right: 5%;
+        line-height: 18px;
+        font-size: 12px;
     }
     #graph {
         margin-top: 18%;
@@ -208,72 +184,53 @@ svg {
         margin-left: 10%;
     }
     svg {
-        margin-top: auto;
-        margin-left: 0;
+        margin-top: -8%;
+        margin-left: -15%;
     }
     .masthead {
         top: 0;
     }
+    #btnUser{
+        margin-top: -10%;
+        left: -5%;
+    }
+    #btnTraffic{
+        left: 0;
+    }
+    #btnPacket {
+        left: 5%;
+    }
     /* Start the vertical centering */
     
-    .site-wrapper-inner {
-        vertical-align: middle;
-    }
     /* Handle the widths */
-    
+    .site-wrapper-inner {
+    vertical-align: middle;
+  }
     .masthead,
     .cover-container {
         width: 100%;
     }
-    #btnUser {
-        position: absolute;
-        left: 25%;
-        top: 16%;
-        cursor: pointer;
-        background-color: transparent;
-        border: 2px solid #fff;
-        text-align: center;
-        color: #fff;
-        right: 0px;
-        z-index: 1;
-    }
-    #btnTraffic {
-        position: absolute;
-        left: 43%;
-        top: 16%;
-        cursor: pointer;
-        background-color: transparent;
-        border: 2px solid #fff;
-        text-align: center;
-        color: #fff;
-        right: 0px;
-        z-index: 1;
-    }
-    #btnPacket {
-        position: absolute;
-        left: 60%;
-        top: 16%;
-        cursor: pointer;
-        background-color: transparent;
-        border: 2px solid #fff;
-        text-align: center;
-        color: #fff;
-        right: 0px;
-        z-index: 1;
-    }
+  
 }
-@media (min-width: 992px) {
-    .masthead,
-    .cover-container {
-        width: 1000px;
-        z-index: 1;
+@media (min-width: 776px) {
+     .masthead-brand {
+        float: left;
+        position: relative;
+    }
+    .masthead-nav {
+        position: relative;
+        float: right;
+    }
+    #graph {
+        margin-top: 35%;
     }
     h3 {
         font-size: 35px;
     }
     .tooltip {
         top: 30%;
-        right: 15%;
+        left: -66%;
+        right:0;
         line-height: 20px;
         font-size: 15px;
     }
@@ -283,45 +240,13 @@ svg {
         margin-left: 15%;
         margin-top: auto;
     }
-    svg {
-        margin-top: auto;
-        margin-left: 0;
+    #btnUser{
+        margin-top: 8%;
     }
-    #btnUser {
-        position: absolute;
-        left: 20%;
-        top: 15%;
-        cursor: pointer;
-        background-color: transparent;
-        border: 2px solid #fff;
-        text-align: center;
-        color: #fff;
-        right: 0px;
-        z-index: 1;
-    }
-    #btnTraffic {
-        position: absolute;
-        left: 25%;
-        top: 15%;
-        cursor: pointer;
-        background-color: transparent;
-        border: 2px solid #fff;
-        text-align: center;
-        color: #fff;
-        right: 0px;
-        z-index: 1;
-    }
-    #btnPacket {
-        position: absolute;
-        left: 30%;
-        top: 15%;
-        cursor: pointer;
-        background-color: transparent;
-        border: 2px solid #fff;
-        text-align: center;
-        color: #fff;
-        right: 0px;
-        z-index: 1;
+}
+@media (min-width: 999px){
+    #btnUser{
+        margin-top: 5%;
     }
 }
 /* FAQ container */
