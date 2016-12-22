@@ -7,10 +7,10 @@ d3.json("data.json", function(data) {
 setInterval(function() {
     d3.json("data.json", function(data) {
     dataSet = data;
+    location.reload();
   });                     
 }, 10000);   
   
-
 var width = window.innerWidth,
     height = 650;
 
@@ -35,19 +35,20 @@ var tooltip = d3.select("body")
   .style("position", "absolute")
   .style("visibility", "hidden");
 
-  // Button for traffic graph
+  // Button for user graph
   d3.select(".buttons").append("button").text("User")
   .attr("id","btnUser")
   .on("click",function(){
       return redraw(dataSet,"user");
     })
-  // User graph
+  // traffic
   d3.select(".buttons").append("button").text("Traffic")
   .attr("id","btnTraffic")
-  .on("click",function(){ 
+  .on("click",function(){
+      d3.select
       return redraw(dataSet,"traffic");
     })
-    // Packets graph
+    // Packets 
   d3.select(".buttons").append("button").text("Packets")
     .attr("id","btnPacket")
     .on("click",function(){
@@ -83,6 +84,8 @@ var counter = 0;
 
 var timer = setInterval(function(){
 
+  "use strict"
+
   if (nodes.length > dataSet.length-1) { clearInterval(timer); return;}
 
   var item = dataSet[counter];
@@ -93,10 +96,6 @@ var timer = setInterval(function(){
                     };
   nodes.push(nodeObject);
   force.start();
-
-  for(var k in dataSet) {
-    var o = dataSet[k];
-}
 
  node = node.data(nodes);
 
@@ -140,15 +139,14 @@ var timer = setInterval(function(){
           return Math.min(2 * d.r, (2 * d.r - 8) / this.getComputedTextLength() * 16) + "px"; 
        })
       .attr("dy", ".35em")
-
-    nodesByName[item.name] = n;
+    node.exit().remove();
   counter++;
 }, 0);
-
 
 function redraw(newData,check){
 
    svg.remove();
+
    svg = d3.select("#graph")
     .append("svg")
     .attr("preserveAspectRatio", "xMinYMin meet")
@@ -184,7 +182,6 @@ function redraw(newData,check){
 
   var node = svg.selectAll("g");
   var counter = 0;
-
   var timer = setInterval(function(){
 
   if (redrawNodes.length > dataSet.length-1) { clearInterval(timer); return;}

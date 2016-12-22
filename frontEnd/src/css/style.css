@@ -89,6 +89,11 @@ svg {
     background-color: white;
     color: #434343;
 }
+#btnUser.active{
+    border-radius: 50px;
+    background-color: white;
+    color: #434343;
+}
 #btnTraffic {
     position: relative;
     cursor: pointer;
