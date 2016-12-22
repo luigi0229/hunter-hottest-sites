@@ -9,7 +9,7 @@ This project displays several visualizations of Hunter students' packets, sniffe
 
 Eliazar is currently a fulltime student and part time network admin at an IT provider. His strengths lie mostly in networking and batch scripting. He really enjoys programming and building big programs/projects from scratch. His TCP/IP knowledge along with his creativity and some python scripting will be very helpful in finding what a small population of students at Hunter are mostly interested in.
 
-**Jia Yong**
+**Leon**
 
 Jiayong, A.k.a. Leon, loves everything about computers. While he is studying for a bachelor degree in computer science, focusing in software development using C++ and java, he is also interested in front-end, and had experiences with html, css and javascript. He will be analyzing incoming traffic from all users and visually present the results for the class.
 

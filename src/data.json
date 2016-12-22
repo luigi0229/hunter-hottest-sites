@@ -1,8 +1,0 @@
-[{"googlehosted.com": {"timeInterval": "10 - 11", "totalPackets": 28, "trafficLength": "  5KB", "IPcount": 1}},
-{"akamaitechnologies.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "126B", "IPcount": 1}},
-{"charter.com": {"timeInterval": "10 - 11", "totalPackets": 1, "trafficLength": "149B", "IPcount": 1}},
-{"facebook.com": {"timeInterval": "10 - 11", "totalPackets": 21, "trafficLength": "  5KB", "IPcount": 1}},
-{"amazonaws.com": {"timeInterval": "10 - 11", "totalPackets": 60, "trafficLength": " 14KB", "IPcount": 1}},
-{"1e100.net": {"timeInterval": "10 - 11", "totalPackets": 169, "trafficLength": " 27KB", "IPcount": 5}},
-{"leetcode.com": {"timeInterval": "10 - 11", "totalPackets": 4, "trafficLength": "696B", "IPcount": 1}}
-]

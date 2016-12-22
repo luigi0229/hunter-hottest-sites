@@ -1,27 +1,28 @@
-from sites import *
-import threading
+# import threading
 import time
 from packetAnalyzer import *
-from packetAnalyzerFiltered import *
 import multiprocessing
 
 
 def main():  
     global trigger
-    #p = multiprocessing.Process(target=startCapture, name="startCapture")
     p = multiprocessing.Process(target=startCapture, name="startCapture") 
     p.start()
-    time.sleep(15)   #Time to run capture
+    # #time.sleep(1500)   #Time to run capture
     
-    #p2 = multiprocessing.Process(target=startCapture2, name="startCapture") 
-    #p2.start()
-    #time.sleep(350)   #Time to run capture
+
+    # #p.terminate()
+    # #p.join()
+    # #print "Packet pacture terminated"
+
+    # p.terminate()
+    # p.join()
+
+    # p2 = multiprocessing.Process(target=startWritting, name="startWritting") 
+    # p2.start()
 
 
-    p.terminate()
-    p.join()
-    #p2.terminate()
-    #p2.join()
-    print "Packet pacture terminated"
+    # p2.terminate()
+    # p2.join()
 
 main()
