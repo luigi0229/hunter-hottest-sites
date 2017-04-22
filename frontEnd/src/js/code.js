@@ -4,12 +4,12 @@ d3.json("data.json", function(data) {
   dataSet = data;
 });
 
-setInterval(function() {
-    d3.json("data.json", function(data) {
-    dataSet = data;
-    location.reload();
-  });                     
-}, 10000);   
+// setInterval(function() {
+//     d3.json("data.json", function(data) {
+//     dataSet = data;
+//     location.reload();
+//   });                     
+// }, 10000);   
   
 var width = window.innerWidth,
     height = 650;
@@ -36,7 +36,7 @@ var tooltip = d3.select("body")
   .style("visibility", "hidden");
 
   // Button for user graph
-  d3.select(".buttons").append("button").text("User")
+  d3.select(".buttons").append("button").text("Users")
   .attr("id","btnUser")
   .on("click",function(){
       return redraw(dataSet,"user");

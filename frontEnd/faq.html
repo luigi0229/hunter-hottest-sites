@@ -8,16 +8,16 @@
  <body>
         <a class="homeBtn" href="/">Home</a> 
         <h1>FAQ</h1>
-        <h2>Questions You May Have</h2>
         <dl class="dl-faq pab_container">
             <dt data-pab="faq_1">
-                <span>How does it work?</span>
+                <span>What is it? How does it work?</span>
             </dt>
             <dd id="faq_1">
                 <div>
                     <p>
                     <p></p>
-                        The capturing device (hopefully a Raspberry Pi) will run on a specific wireless network on campus. It will capture ‘Every’ packet on that interface from all the users connected to it, will scrape basic information from every packet(destination, time, size of packet, etc), analyze them, and store them on a JSON file. <p></p>The JSON file will be sent to the server hosting the website, where the data will be displayed in multiple ways. The update time interval is 10 seconds at the moment.</p>
+                        This project provides a live visual representation of all websites and services students use at Hunter College. It is using a wireshark module for Python (pyshark) to capture network traffic.
+                        <p></p>The capturing device (a Raspberry Pi) will run on a specific wireless network on the Hunter College campus. It will capture ‘Every’ packet on that interface from all the users connected to it, will scrape basic information from every packet(destination, time, size of packet, etc), analyze them, and store them on a JSON file. <p></p>The JSON file will be sent to the server hosting the website, where the data will be displayed in multiple ways. The update time interval when the website is live is 10 seconds at the moment. <p></p>The site allows for 3 sorting methods, 'users' which will display the nodes based on the number of users currently using the service, 'traffic' which measures the overall sum of the size of all packets going to that destination (in KBs), and 'Packets' which will sort based on the number (count) of packets going.</p>
                 </div>
             </dd>
             <dt data-pab="faq_2"><span>Is my privacy being invaded?</span></dt>
@@ -28,12 +28,12 @@
                        No. Although we might see packets coming from your device, these packets are encrypted. We see the header of the packet, which contains metadata such as source, destination, browser version, timestamps, etc. We also don’t keep track of IP addresses.</p>
                 </div>
             </dd>
-            <dt data-pab="faq_3"><span>Is this capturing ALL the traffic at hunter college?</span></dt>
+            <dt data-pab="faq_3"><span>Is this capturing ALL the traffic at Hunter College?</span></dt>
             <dd id="faq_3">
                 <div>
                     <p>
                     <p></p>
-                        No. The script will only capture the traffic flowing through the repeater where our capturing device is connected. If multiple repeaters belong to the same subnet (which is the case on many places in the library), then our capturing range increases to multiple repeaters. But it is mostly based on physical location.<p></p> Also, the fact that you might be next to the capturing device does not guarantee that you are connected to the same repeater. If you came from direction A, and I came from direction B, and we meet at C, I might connect to C, but your device might remain connected to A, or vice versa.
+                        No. The script will only capture the traffic flowing through the repeater where our capturing device is connected.
                         </p>                
                 </div>
             </dd>
@@ -42,7 +42,7 @@
                 <div>
                     <p>
                         <p></p>
-                        Yes, and No. Some websites are hosted in an environment that might return a different hostname than what the GET request is when you attempt to access it.<p></p> For instance, if you are hosting a website on AWS (Amazon Web Services), and your website is called ‘xyz.com’, our capturing script might see this request as an AWS request, making xyz.com pretty much invisible in our data. Our other graphing tool should be able to capture every single website you type in your browser though, as it is capturing DNS queries (GET requests).
+                        Yes, and No. Some websites are hosted in an environment that might return a different hostname than what the GET request is when you attempt to access it. We are using the 'gethostbyaddr()' function from Python's Socket Module. Whatever host name this returns, will be the host appended to the node on the page. We have a static dictionary of static IPs popular services (Facebook, Youtube, Instagram, etc), we first compare the destination IPs to this dictionary, if it does not match any, we use gethostbyaddr(destinationIP).
                     </p>
                 </div>
             </dd>
