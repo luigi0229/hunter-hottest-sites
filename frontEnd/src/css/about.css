@@ -1,0 +1,31 @@
+.about h1:before {
+    position: absolute;
+    margin-left: 28%;
+    margin-right: 28%;
+    top: 10%;
+    right: 0;
+    left: 0;
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-top-color: #505254;
+    content: '';
+    -webkit-mask-image: radial-gradient(circle, #000 10%, transparent);
+}
+.about h2 {
+    text-align: left;
+    margin-left: 25%;
+}
+.about p {
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: left;
+}
+.morecontent span {
+    display: none;
+}
+.show-more-link {
+    margin-top: 1%;
+    display: block;
+    font-size: 15px;
+    opacity: 0.9;
+}
